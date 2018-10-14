@@ -1,0 +1,16 @@
+:lang: no
+:difi_orig_language: no
+:difi_translation_status: incomplete
+:doctitle_no: Prosjektområder
+:keywords_no: Prosjekt
+:doctitle_en: English title TBD  
+:keywords_en: English keywords TBD
+
+:preamble: Områder for lagring av dokumentasjon relatert til prosjekter, slik f.eks. møtereferater 
+
+include::../felles/includes/standardheader.adoc[]
+include::../felles/includes/commonlinks1.adoc[]
+
+// Article contents written below
+NB: Dokumentasjon om arkitekturer, løsninger, standarder m.m bør finnes på "riktig" sted i mappestrukturen under arkitekturbiblioteket etter hvert som slikt innhold blir klart. Vurder å produsere innhold direkte der det hører hjemme ved å bruke git-branching for kladding og utarbeidelse av nye versjoner. 
+

@@ -1,0 +1,22 @@
+:lang: no
+:revdate: 2018-08-18
+:title_en: Functional requirements for hte Architecture Repository
+:title_no: Funksjonelle krav for arkitekturbiblioteket
+:keywords: Arkitekturbibliotek, Funksjonelle krav, Kapabiliteter
+:keywords_no: Arkitekturbibliotek, Funksjonelle krav, Kapabiliteter
+:keywords_en: Arkitekturbibliotek, Funksjonelle krav, Kapabiliteter
+
+include::common/includes/standardheader.adoc[]
+include::common/includes/commonlinks1.adoc[]
+
+Skille mellom innhold og presentasjon:: 
+    Innhold lagres på gitte standardformater, som så kan konverteres til vilkårlig format for plublisering eller videre arbeid. Eksempel:  
+
+Levende dokumentasjon:: 
+    Dokumentasjonen  oppdateres løpende i et nettverk av mindre innholdselementer. Hovedregelen er at siste versjon gjelder, men det skal også være mulig å lenke til spesifikke versjonre.
+
+Ta hensyn til ulike brukergruppers behov og preferanser::
+    * Det skal være enkelt å komme i gang for nye brukere og forfattere. F.eks. må det være mulig å bruke en ren teksteditor, MS Word eller Google Docs for å bidra med innhold.
+    * Det skal gis avanserte muligheter for de som har kompliserte behov,f.eks. fior å sette sammen stører dokumenter
+    
+    komme igang Versjonering og historikk - mulig å gå tilbake og se tidligere versjoner

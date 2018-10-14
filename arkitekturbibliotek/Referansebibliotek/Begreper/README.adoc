@@ -1,0 +1,23 @@
+////
+:description: 
+////
+:lang: no
+:attr_orig_language: no
+:attr_translation_status: -
+:doctitle_no: Begreper
+:keywords_no: begrep, term, begrepskatalog
+:doctitle_en: Vocabulary
+:keywords_en: term, concept, vocabulary,  
+:keywords_en:
+:revdate: 2018-08-06
+include::..//common/includes/standardheader.adoc[]
+include::..//common/includes/commonlinks1.adoc[]
+
+ifeval::["{lang}" == "no"]
+#Norsk innhold skrives her...#
+endif::[]
+
+ifeval::["{lang}" == "en"]
+#Contents in the english langage to be written here...#
+endif::[]
+

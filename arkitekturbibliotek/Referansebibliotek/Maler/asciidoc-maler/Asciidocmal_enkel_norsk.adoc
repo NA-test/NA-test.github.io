@@ -1,0 +1,45 @@
+////
+
+OPTIONAL INFO AS A COMMENT HERE TO TELL WHAT THIS FILE IS ABOUT 
+
+In this case its a simple template for an article in the Norwegian language only
+
+////
+
+
+//*************** ARTICLE METADATA ***********************
+// language settings for a Norwegian document with no translations:
+:lang: no
+:difi_orig_language: no
+:difi_translation_status: -
+
+// Norwegian docunment level metadata:
+:doctitle_no: Artikkeltittel
+:keywords_no: mal, artikkel, tittel
+//********************************************************
+
+:preamble: Kort, innledende tekst (eng: preamble).
+
+//*************** INCLUDES  ***********************
+include::..//felles/includes/standardheader.adoc[]
+include::..//felles/includes/commonlinks1.adoc[]
+//*************************************************
+
+
+// If you don't want section numbers, just comment or delete the following line
+:numbered:
+
+
+//=====================================================
+//ARTICLE CONTENTS FOLLOWS HERE 
+//=====================================================
+
+== Første seksjon
+Tekst...
+
+=== Underkapittel
+Tekst...
+
+== Andre kapittel 
+Tekst...
+

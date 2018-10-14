@@ -1,0 +1,17 @@
+:lang: no
+:attr_orig_language: no
+:attr_translation_status: incomplete
+//:author: Erik
+//:email: erik.hagen@difi.no
+:revdate: 2018-08-06
+:doctitle_en: Requirements Repository 
+:doctitle_no: Kravbibliotek
+:keywords_no: Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, GitHub
+:keywords_en: Norwegian, Architecture Repository, Public sector, Enterprise Architecture, NIF, Architecture Interoperability Framework, GitHub,
+
+//:preamble: Fjern kommentar om du vil ha med innledningsvis beskrivelse med noe større skrift (og erstatt denne teksten). Wikipedia: A preamble is an introductory and expressionary statement in a document that explains the document's purpose and underlying philosophy. 
+
+include::../felles/includes/standardheader.adoc[]
+include::../felles/includes/commonlinks1.adoc[]
+
+Readme-tekst kommer her...
