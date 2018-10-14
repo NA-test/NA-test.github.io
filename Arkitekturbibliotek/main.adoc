@@ -1,0 +1,80 @@
+:lang: no
+
+:doctitle: Norsk fellesoffentlig arkitekturbibliotek
+:keywords: Norsk, arkitekturbibliotek, offenlig sektor, virksomhetsarkitektur, NIF, samhandlingsarkitektur, rammeverk, GitHub
+:preamble: Arkitekturdokumentasjon - modeller, standarder, referansearkitekturer, veiledninger, anbefalinger, tips, maler og annet av  interesse på tvers av offentlig (og privat) sektor i Norge
+
+include::../felles/includes/standardheader.adoc[]
+
+include::../felles/includes/commonlinks1.adoc[]
+
+////
+////
+
+:path_arkitekturbibliotek_brukerveiledning: {path_solution_building_blocks}/Arkitekturbibliotek_på_github.difi.no/Brukerveiledning
+
+:url_hvordan_opprette_github_bruker: https://www.wikihow.com/Create-an-Account-on-GitHub[Tips om å opprette github bruker]
+
+:link_praktiske_tips_komme_igang_med_innholdsproduksjon: <<../praktisketips/Praktiske_tips_for_å_komme_igang.adoc#, Praktiske tips for å komme i gang med GitHub og bidra med innhold>>
+
+
+:link_grunnleggende_prinsipper_for_biblioteket: <<../praktisketips/grunnleggende_prinsipper_for_biblioteket.adoc#, Grunnleggende prinsipper>>
+
+:link_visjoner_for_biblioteket: <<../praktisketips/visjoner_for_biblioteket.adoc#, Visjoner for arkitekturbiblioteket>>
+
+
+:link_dokumentasjonskonvensjoner: <<{path_arkitekturbibliotek_brukerveiledning}/dokumentasjonskonvensjoner.adoc#, Dokumentasjonskonvensjoner>>
+
+==============
+image:difilogo.svg[image,width=169,height=66]
+==============
+
+
+== Bakgrunn og formål
+Norsk fellesoffentlig arkitekturbibliotek er opprettet av Difi 2018 for å samle dokumentasjon om virksomhetsarkitektur som kan være av felles interesse og bidra tli økt samhandling, gjenbruk og innovasjon.
+
+Biblioteket inneholder informasjon om rammeverk, retningslinjer, anbefalinger, tips, maler, felleskomponenter, behov.
+
+Originalinnhold produseres og lagres primært på GitHub, men det benyttes et sett av standard kildeformater som gjør at en likevel ikke er avhengig av GitHub. Disse kildeformatene kan konverteres til html, pdf og en  rekke andre presentasjonsformater, ut fra behovet. #Referansekatalogen ... html...#
+
+== Visjon
+Det er et siktemål at alle virksomheter i offentlig sektor følger et sett av konvensjoner for arkitekturdokumentasjon som gjør det enkelt å referere og integrere innhold på tvers.
+
+Se også:
+
+1. {link_visjoner_for_biblioteket}
+2. {link_grunnleggende_prinsipper_for_biblioteket}
+
+
+== Avgrensing og sammenheng
+
+I tillegg til innholdet i dette biblioteket, vil det finnes stoff i tilsvarende (git-baserte) biblioteker i de enkelte virksomhetene som også kan være av felles interesse, og som en kan lenke til fra dette biblioteket og vice versa.
+
+Det vil også finnes informasjon og data som ikke per i dag (2018) egner seg godt for innholdsproduksjon og lagring på GitHub, slik som f.eks. regneark og databaser.
+
+
+== Hvordan finne fram
+Mappestrukturen i biblioteket er bygget opp etter mønster av {url_togaf_92} og {url_norsk_arkitekturrammeverk_for_samhandling}.
+
+Her er en overordnet kapittelinndeling: #TBD#
+
+NOTE: Det er også lagt opp til å tagge innhold med metadata, for å støtte søk og alternative navigeringsmåter.
+
+NOTE: Lenke til komplett innholdsfortegnelse: ...
+
+
+== Ditt bidrag er ønsket
+Det legges opp til utstrakt samarbeid på tvers av av offentlig sektor for å etablere og vedlikeholde det fellesoffentlige arkitekturbiblioteket.
+
+Terskelen for å publisere innhold skal ikke være for høy. Eksempler og praksis må deles for å få fram god praksis, anbefalinger, retningslinjer og standarder.
+
+Gi beskjed via e-post til nasjonalarkitektur@difi.no om du ønsker å bidra og vil ha skrivetilgang. Oppgi da ditt brukernavn på GitHub (se eventuelt {url_hvordan_opprette_github_bruker}).
+
+Se også:
+
+1. {link_praktiske_tips_komme_igang_med_innholdsproduksjon}
+2. {link_dokumentasjonskonvensjoner}
+
+==============
+image:difilogo.svg[image,width=169,height=66]
+==============
