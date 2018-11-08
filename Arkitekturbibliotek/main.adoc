@@ -5,7 +5,6 @@
 :preamble: Arkitekturdokumentasjon - modeller, standarder, referansearkitekturer, veiledninger, anbefalinger, tips, maler og annet av  interesse på tvers av offentlig (og privat) sektor i Norge
 
 include::../felles/includes/standardheader.adoc[]
-
 include::../felles/includes/commonlinks1.adoc[]
 
 ////
@@ -24,11 +23,6 @@ include::../felles/includes/commonlinks1.adoc[]
 
 
 :link_dokumentasjonskonvensjoner: <<{path_arkitekturbibliotek_brukerveiledning}/dokumentasjonskonvensjoner.adoc#, Dokumentasjonskonvensjoner>>
-
-==============
-image:difilogo.svg[image,width=169,height=66]
-==============
-
 
 == Bakgrunn og formål
 Norsk fellesoffentlig arkitekturbibliotek er opprettet av Difi 2018 for å samle dokumentasjon om virksomhetsarkitektur som kan være av felles interesse og bidra tli økt samhandling, gjenbruk og innovasjon.

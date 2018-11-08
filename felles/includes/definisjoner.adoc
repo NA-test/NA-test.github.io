@@ -1,0 +1,3 @@
+//
+:kommentarformat: [red yellow-background]
+//
