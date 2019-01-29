@@ -3,7 +3,7 @@
 :keywords: nasjonal arkitektur, virksomhetsarkitektur
 :audience: alle
 
-include::../felles/includes/commonincludes.adoc[]
+include::./felles/includes/commonincludes.adoc[]
 
 
 image:./images/norsk-flagg.png[width=60, height=60] image:./images/uttar-pradesh-vidhaan-sabha.png[width=150, height=150] 
