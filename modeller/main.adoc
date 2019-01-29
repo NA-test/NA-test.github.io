@@ -5,12 +5,12 @@
 
 
 ifndef::standardheader_included[]
-include::./felles/includes/standardheader.adoc[]
-include::./felles/includes/commonlinks1.adoc[]
+include::../felles/includes/standardheader.adoc[]
+include::../felles/includes/commonlinks1.adoc[]
 endif::[]
 
 
-image:./felles/images/i-arbeid.png[width=75, height=75]
+image:../felles/images//i-arbeid.png[width=75, height=75]
 
 [.lead] 
 Samarbeid om arkitekturmodeller i Nasjonalt arkitekturbibliotek gjøres via filutveksling av standard utvekslingsformater for Archimate, BPMN, UML og DMN, med lagring på Github. Det benyttes også en Collaboration plugin til gratisverktøyet Archi. Modellene publiseres på web.

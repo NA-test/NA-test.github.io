@@ -4,14 +4,14 @@
 :preamble: Norge behøver en helhetlig og mer forretningsdrevet tilnærming til digitaliseringsarbeidet.
 
 ifndef::standardheader_included[]
-include::./felles/includes/standardheader.adoc[]
-include::./felles/includes/commonlinks1.adoc[]
+include::../felles/includes/standardheader.adoc[]
+include::../felles/includes/commonlinks1.adoc[]
 endif::[]
 
 
 ////
 ////
-image::../images/i-arbeid.png[width=75, height=75]
+image:./images/:../images/i-arbeid.png[width=75, height=75]
 
 == Innledning
 

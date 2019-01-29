@@ -94,8 +94,9 @@ endif::[]
 :sectanchors:
 :sectnumlevels: 3
 :xrefstyle: short
-//:imagesdir!:
-:imagesdir@: ./images
+
+:imagesdir!:
+//
 ////
 ifdef::attr-root-dir[]
 :imagesdir@: ./common/images
@@ -117,7 +118,7 @@ toc::[]
 endif::[]
 ////
 
-//image:difilogo.svg[image,width=169,height=66]
+//image:./images/difilogo.svg[image,width=169,height=66]
 
 //:difi_include_implementation_notes:
 ifdef::difi_include_implementation_notes[]

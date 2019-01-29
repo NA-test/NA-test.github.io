@@ -2,12 +2,12 @@
 :doctitle: Kunnskapsbibliotek
 :keywords: Kunnskapsbibliotek
 
-include::./felles/includes/commonincludes.adoc[]
+include::../felles/includes/commonincludes.adoc[]
 
 
-image:./felles/images/i-arbeid.png[width=75, height=75, alt="Figur mangler: i-arbeid.png?",]Uferdig innhold - første versjon er fremdeles i arbeid
+image:../felles/images//i-arbeid.png[width=75, height=75, alt="Figur mangler: i-arbeid.png?",]Uferdig innhold - første versjon er fremdeles i arbeid
 
-:imagesdir!:
+
 
 
 [.lead]
@@ -102,4 +102,4 @@ https://ec.europa.eu/digital-single-market/en/news/digital-single-market-mid-ter
 ==== ISA2-programmet
 https://ec.europa.eu/isa2/isa2_en
 
-image:./felles/images/i-arbeid.png[width=75, height=75, alt="Figur mangler: i-arbeid.png?",]
+image:../felles/images//i-arbeid.png[width=75, height=75, alt="Figur mangler: i-arbeid.png?",]

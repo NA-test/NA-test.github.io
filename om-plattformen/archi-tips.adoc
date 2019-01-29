@@ -3,16 +3,16 @@
 
 
 ifndef::standardheader_included[]
-include::./felles/includes/standardheader.adoc[]
+include::../felles/includes/standardheader.adoc[]
 endif::[]
 
 
 [.lead]
 Archi er et gratis og open-source verktøy som støtter Archimate-standarden for arkitekturdokumentasjon, og har tillegg som muliggjør samarbeid rundt felles repository på Github.  
 
-:imagesdir!:
-:imagesdir@: ./images
-image:archi-logo.png[]
+
+
+image:./images/archi-logo.png[]
 
 ////
 ////
@@ -33,14 +33,14 @@ Last ned og installer siste versjon av Archi fra https://www.archimatetool.com/d
 +
 Last ned og installer Model Repository Collaboration Plugin fra  https://www.archimatetool.com/plugins/. Collaboration-menyen skal da komem til syne, slik: 
 +
-image:collaboration-plugin.png[width=450, height=450]
+image:./images/collaboration-plugin.png[width=450, height=450]
 +
 
 3. *Konfigurer Collaboration Plugin*
 +
 Sett inn ditt git brukernavn (Name) og e-post (Email), og mappe-navnet (Local Repository Folder) der du ønsker at Archi skal legge filene når du importerer fra "Github-repoet". 
 +
-image:archi-collaboration-preferences.png[width=600, height=600]
+image:./images/archi-collaboration-preferences.png[width=600, height=600]
 
 
 == Importer Github-repository
@@ -48,11 +48,11 @@ Velg [underline]#Import Remote Model to Workspace# fra menyen under Collaboratio
 
 Når du klikker OK, vil det bli opprettet en mappe ved navn  _archi-collab-nasjonal-arkitektur_ under den mappen du har satt opp under Preferences (se over).
 
-image:add-remote-model.png[width=550, height=550]
+image:./images/add-remote-model.png[width=550, height=550]
 
 Modell-vinduet i Archi vil vise #difi-nasjonal-arkitektur# som modellnavn:
 
-image:archi-workspace.png[width=220, height=220]
+image:./images/archi-workspace.png[width=220, height=220]
 
 == Endring og synkronisering
 De endringene du gjør blir ikke synlige for andre før du publiserer endringene dine. Det finnes flere valg i Collaboration-menyen for synkronisering. Tips:
@@ -66,6 +66,6 @@ _NB: Om flere jobber på de samme modellene samtidig, kan det bli behov for å r
 == Andre tips
 * Collaboration-plugin oppretter en .git undermappe som ikke uten videre er synlig, der det blant annet ligger en #temp.archimate# fil. Det er denne filen som åpnes i Archi når du har importert biblioteket. Nyttig å vite dersom du f.eks. har kommet til å lukke modellen fra workspace i Archi før du har publisert endringene dine! Det er altså bare å åpne denne filen, så kommer den opp i Archi, helt tilsvarende "normale" Archi-filer.    
 + 
-image:hidden-git-files.png[width=300, height=300]
+image:./images/hidden-git-files.png[width=300, height=300]
 
 
