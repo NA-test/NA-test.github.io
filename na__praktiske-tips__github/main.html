@@ -5,8 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="nasjonal arkitektur, virksomhetsarkitektur">
-<title>Nasjonal arkitekturplattform</title>
+<meta name="keywords" content="Github">
+<meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
+<title>Praktiske tips for å komme igang med GitHub</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -430,71 +431,294 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>Nasjonal arkitekturplattform</h1>
+<h1>Praktiske tips for å komme igang med GitHub</h1>
+<div class="details">
+<span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
+<span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
+</div>
 </div>
 <div id="content">
-<div class="paragraph">
-<p>Unresolved directive in main.adoc - include::./felles/includes/commonincludes.adoc[]</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/norsk-flagg.png" alt="norsk flagg" width="60" height="60"></span> <span class="image"><img src="./images/uttar-pradesh-vidhaan-sabha.png" alt="uttar pradesh vidhaan sabha" width="150" height="150"></span></p>
-</div>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>Plattform for samproduksjon og deling av arkitekturdokumentasjon på tvers av sektorer og virksomheter i Norge.</p>
+<p>Her gis praktiske tips om bruk av Github i tilknytning til arbeidet med Nasjonal arkitektur. Det gis tips om spesifikke verktøy, men hver enkelt står fritt til å velge andre alternativer.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./na__felles//images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>  Omstrukturering og tillegg i arbeid</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1. Generelt</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Git er en standard for versjonskontroll og lagring av kode og dokumenter. GitHub er en av flere skytjenester som støtter git, og er den tjenesten som er valgt av Difi. Det er i utgangspunktet gratisversjonen av Github som benyttes.</p>
 </div>
 <div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<em>Nasjonal arkitekturplattform</em> er inntil videre et eksperiment, som ledd i Difis arbeid med kommunikasjonsløsninger.
+Github ble oppkjøpt av Microsoft i 2018.
 </td>
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>Github kan brukes til å lagre vilkårlige dokumenttyper, men egner seg best til tekstbaserte dokumenter, dvs. dokumenter hvor kildeformatet er rå tekst. Det er dette git ble laget for, og da opprinnelig for versjonsstyring og samarbeid om
+kode (programvare).</p>
+</div>
+<div class="paragraph">
+<p>Markupspråk som Markdown og Asciidoc lar deg skrive dokumenter i ren tekst, og egner seg tilsvarende godt for den funksjonaliteten som finnes rundt versjonsstyring i Github. Asciidoc er valgt her, fordi dette er lett å komme i gang med for nye brukere, samtidig som det gir avanserte muligheter for erfarne brukere. Asciidoc som kildeformat foretrekkes framfor f.eks. Microsoft Word, fordi det framstår som mer åpent og "prosesseringsvennlig". Se <a href="asciidoc-tips.adoc">Praktiske tips on Asciidoc</a> for mer informasjon.</p>
+</div>
+<div class="paragraph">
+<p>Standard utvekslingsformater for modelleringsspråk som Archimate, BPMN, DMN og UML er også tekstbaserte, og egner seg for versjonsstyring i Github.</p>
+</div>
+<div class="paragraph">
+<p>Nasjonalt Arkitekturbibliotek er organisert i en mappestruktur med undermapper for dokumentasjon av arkitekturer, løsninger, referansearkitekturer m.m.</p>
+</div>
+<div class="paragraph">
+<p>I tillegg finnes seperate prosjektbiblioteker. Prosjektleveranser i form av dokumentasjon kopieres til "riktig" sted i strukturen under Nasjonalt arkitekturbiblitotek før prosjektslutt, mens arbeidsversjoner, møtereferater og annet prosjektspesifikt innhold tas vare på i prosjektområdet så lenge det er interessant.</p>
+</div>
+<div class="paragraph">
+<p>Skriverettigheter til selve arkitekturbiblioteket er forbeholdt medlemmer av bibliotekredaksjonen. Tilsvarende er det kun prosjektmedlemmenene som vil ha skrivetilgang til hvert  prosjekt-repository.</p>
+</div>
+<div class="paragraph">
+<p>Andre som vil bidra med innhold kan gjøre dette ved å kopiere aktuelt GitHub repository (git Fork), gjøre endringer og så spille inn endringsforslag (git Pull Request). Redaksjonen for aktuelt GitHub-repository (arkitekturbibliotek eller prosjekt) vil så behandle endringsforslaget og eventuelt ta inn nytt eller endret innhold (git merge).</p>
+</div>
+<div class="paragraph">
+<p><em>Merk: Git gir flere muligheter enn "fork" og "pull request" for å spille inn endringsforslag, men vi anbefaler inntil videre "fork" og "pull request" som nevnt.</em></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_prosedyre_for_å_komme_i_gang_med_git_og_github"><a class="anchor" href="#_prosedyre_for_å_komme_i_gang_med_git_og_github"></a><a class="link" href="#_prosedyre_for_å_komme_i_gang_med_git_og_github">2. Prosedyre for å komme i gang med git og Github</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_opprett_github_bruker"><a class="anchor" href="#_opprett_github_bruker"></a><a class="link" href="#_opprett_github_bruker">2.1. Opprett GitHub bruker</a></h3>
+<div class="paragraph">
+<p>Dersom du ikke allerede har en GitHub-bruker, kan dette gjøres <a href="https://github.com/join?source=header">her</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_etabler_lokal_filmappe_for_kloning_av_github_filer"><a class="anchor" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer"></a><a class="link" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer">2.2. Etabler lokal filmappe for kloning av github-filer</a></h3>
+<div class="paragraph">
+<p>Lag en filmappe som hjemmeområde for å arbeide lokalt med github-filer, eventuelt med en undermappe for biblioteker fra Difi.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+For spesielt interesserte: Om du bruker lange navn og dyp mappestruktur i Windows, kan du få problemer med en begrensning på 260
+karakterer i total lengde på filnavn. I og med Windows 10 kan denne begrensningen oppheves. Se f.eks.
+<a href="https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/" class="bare">https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/</a> for en oppskrift på
+hvordan dette kan gjøres.<br>
+<br>
+Kort fortalt: På Windows 10 Enterprise kan du kjøre gpedit.msc og endre Aktiver lange Win32 baner under
+Datamaskinkonfigurasjon, Administrative maler, System, Filsystem. Du må restarte eller logge av og på for at endringen skal tre i kraft.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_installer_programvare_for_git_og_github"><a class="anchor" href="#_installer_programvare_for_git_og_github"></a><a class="link" href="#_installer_programvare_for_git_og_github">2.3. Installer programvare for git og GitHub</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="_generelt_2"><a class="anchor" href="#_generelt_2"></a><a class="link" href="#_generelt_2">2.4. Generelt</a></h3>
+<div class="paragraph">
+<p>Det finnes tre kategorier mennesker:</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="om-plattformen/">Om plattformen</a></p>
-<div class="paragraph">
-<p>Denne plattformen er tilrettelagt av Difi, med utgangspunkt i gratis verktøy og åpen kildekode. Plattformen har funksjonalitet for redigering, lagring og publisering av dokumenter og arkitekturmodeller, i tillegg til diskusjonsgrupper m.m.</p>
-</div>
+<p>De som foretrekker grafiske brukergrensesnitt</p>
 </li>
 <li>
-<p><a href="praktiske-tips/">Praktiske tips</a></p>
-<div class="paragraph">
-<p>Praktiske tips for å komme i gang og bidra med innhold, forslag og tilbakemeldinger.</p>
-</div>
+<p>De som foretrekker å skrive tekstkommandoer</p>
 </li>
 <li>
-<p><a href="arkitekturbibliotek/">Nasjonalt arkitekturbibliotek</a></p>
-<div class="paragraph">
-<p>Rammeverk, standarder, veiledere, føringer, felles behov, felles løsninger, felles arkitekturer, styringsinformasjon og annet av interesse på tvers av sektorer og virksomheter.</p>
+<p>De som ikke har anledning til å installere programvare</p>
+</li>
+</ol>
 </div>
+<div class="paragraph">
+<p>Anbefalinger for disse kategoriene er:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Bruk GitHub Desktop (enkel bruk) eller TortoiseGit (mer avansert)</p>
 </li>
 <li>
-<p><a href="kunnskapsbibliotek/">Kunnskapsbibliotek</a></p>
-<div class="paragraph">
-<p>Samling av interessant og relevant informasjon fra eksterne kilder, som redskap for felles forståelse og kunnskapsbygging på tvers. Dette kan være lenker og omtale av internasjonale standarder, utvalgte bøker, verktøy, arkitekturrammeverk fra andre land, med videre. Alle oppfordres til å bidra med innhold eller forslag til innhold.</p>
-</div>
+<p>Bruk <em>Git Bash</em> eller <em>Git CMD</em> (eller Windows CMD).</p>
 </li>
 <li>
-<p><a href="blogg/">Blogger og meningsinnlegg</a></p>
-<div class="paragraph">
-<p>Personlige innlegg - blogger og meningsinnlegg - for å informere eller påvirke  utviklingen av nasjonal arkitektur og nasjonalt arkitekturbibliotek. Alle oppfordres til å bidra med sine personlige meninger.</p>
+<p>Arbeid direkte i nettleseren under <a href="https://github.com/difi/nasjonal_arkitektur" class="bare">https://github.com/difi/nasjonal_arkitektur</a> , uten å klone til lokalt filområde;  eventuelt bruk asciidoclive for asciidoc-dokumentasjon; ref. <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a></p>
+</li>
+</ol>
 </div>
+<div class="sect3">
+<h4 id="_alternativ_1_github_desktop"><a class="anchor" href="#_alternativ_1_github_desktop"></a><a class="link" href="#_alternativ_1_github_desktop">2.4.1. Alternativ 1: GitHub Desktop</a></h4>
+<div class="paragraph">
+<p>GitHub Desktop er en mye brukt og god klient for å klone og oppdatere GitHub-biblioteker.</p>
+</div>
+<div class="paragraph">
+<p>GitHub Desktop kan lastes ned her: <a href="https://desktop.github.com/" class="bare">https://desktop.github.com/</a>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+Om GitHub desktop har problemer med å aksessere .gitconfig-filen, er en fix å opprette en systemvariabel HOME til den mappen du har opprettet som hjemmeområde for dine lokale GitHub-filer (bruk Kontrollpanel, System, Avanserte systeminnstillinger, miljøvariabler).<br>
+<br>
+Tips: Det er kanskje en god ide å unngå å bruke nettverks-drive (som noen virksomheter bruker som default for Dokumenter)? Bruk  heller en katalog direkte under ditt brukernavn på C:\Users? Se også  <a href="https://github.com/desktop/desktop/issues/4119" class="bare">https://github.com/desktop/desktop/issues/4119</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_alternativ_2_tortoisegit"><a class="anchor" href="#_alternativ_2_tortoisegit"></a><a class="link" href="#_alternativ_2_tortoisegit">2.4.2. Alternativ 2: TortoiseGit</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_alternativ_3_git_bash"><a class="anchor" href="#_alternativ_3_git_bash"></a><a class="link" href="#_alternativ_3_git_bash">2.4.3. Alternativ 3: Git Bash</a></h4>
+<div class="paragraph">
+<p>Git Bash fås med siste versjon av Git for Windows her: <a href="https://git-scm.com/download/win" class="bare">https://git-scm.com/download/win</a></p>
+</div>
+<div class="paragraph">
+<p>Generelle tips om å komme igang med Bash kommandolinke:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://rubygarage.org/blog/most-basic-git-commands-with-examples" class="bare">https://rubygarage.org/blog/most-basic-git-commands-with-examples</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_alternativ_4_asciidoclive"><a class="anchor" href="#_alternativ_4_asciidoclive"></a><a class="link" href="#_alternativ_4_asciidoclive">2.4.4. Alternativ 4: Asciidoclive</a></h4>
+<div class="paragraph">
+<p>Ingen installasjon nødvendig. Se <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrome eller Firefox.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_klon_github_prosjektet_til_din_maskin"><a class="anchor" href="#_klon_github_prosjektet_til_din_maskin"></a><a class="link" href="#_klon_github_prosjektet_til_din_maskin">2.5. Klon GitHub-prosjektet til din maskin</a></h3>
+<div class="sect3">
+<h4 id="_kloning_med_github_desktop"><a class="anchor" href="#_kloning_med_github_desktop"></a><a class="link" href="#_kloning_med_github_desktop">2.5.1. Kloning med GitHub Desktop</a></h4>
+<div class="paragraph">
+<p>Om du bruker GitHub Desktop, kan det gjøres slik:</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Åpne  GitHub-biblioteket i nettleser, dvs.   <a href="https://github.com/difi/nasjonal_arkitektur" class="bare">https://github.com/difi/nasjonal_arkitektur</a></p>
+</li>
+<li>
+<p>Velg "Clone or Download" i GitHub og velg så "Open in Desktop".</p>
+</li>
+<li>
+<p>I GitHub Desktop, velg File | Clone a repository og angi hvor filene skal legges på din harddisk, som omtalt under avsnittet om lokla filmappe ovenfor. Om du f.eks. benytter C:\Users\eha\GitHub\Difi, vil GitHub Desktop opprette C:\Users\eha\GitHub\Difi\nasjonal_arkitektur.</p>
 </li>
 </ol>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_kloning_med_tortoisegit"><a class="anchor" href="#_kloning_med_tortoisegit"></a><a class="link" href="#_kloning_med_tortoisegit">2.5.2. Kloning med TortoiseGit</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_kloning_med_windows_kommandolinje"><a class="anchor" href="#_kloning_med_windows_kommandolinje"></a><a class="link" href="#_kloning_med_windows_kommandolinje">2.5.3. Kloning med Windows kommandolinje</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_kloning_med_git_bash"><a class="anchor" href="#_kloning_med_git_bash"></a><a class="link" href="#_kloning_med_git_bash">2.5.4. Kloning med Git Bash</a></h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_gjør_endringer"><a class="anchor" href="#_gjør_endringer"></a><a class="link" href="#_gjør_endringer">2.6. Gjør endringer</a></h3>
+<div class="paragraph">
+<p>Du kan gjøre det helt enkelt eller mer eller mindre avansert.</p>
+</div>
+<div class="paragraph">
+<p>Difi har etablert noen maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde tekster på flere språk, metadata m.m.</p>
+</div>
+<div class="paragraph">
+<p>Disse malene finnes her: &#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_publiser_endringer"><a class="anchor" href="#_publiser_endringer"></a><a class="link" href="#_publiser_endringer">2.7. Publiser endringer</a></h3>
+<div class="sect3">
+<h4 id="_publisering_med_github_desktop"><a class="anchor" href="#_publisering_med_github_desktop"></a><a class="link" href="#_publisering_med_github_desktop">2.7.1. Publisering med GitHub Desktop</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_publisering_med_tortoisegit"><a class="anchor" href="#_publisering_med_tortoisegit"></a><a class="link" href="#_publisering_med_tortoisegit">2.7.2. Publisering med TortoiseGit</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_publisering_med_windows_kommandolinje"><a class="anchor" href="#_publisering_med_windows_kommandolinje"></a><a class="link" href="#_publisering_med_windows_kommandolinje">2.7.3. Publisering med Windows kommandolinje</a></h4>
+
+</div>
+<div class="sect3">
+<h4 id="_publisering_med_git_bash"><a class="anchor" href="#_publisering_med_git_bash"></a><a class="link" href="#_publisering_med_git_bash">2.7.4. Publisering med Git Bash</a></h4>
+
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mer_avanserte_temaer"><a class="anchor" href="#_mer_avanserte_temaer"></a><a class="link" href="#_mer_avanserte_temaer">2.8. Mer avanserte temaer</a></h3>
+<div class="sect3">
+<h4 id="_git_submodules"><a class="anchor" href="#_git_submodules"></a><a class="link" href="#_git_submodules">2.8.1. Git Submodules</a></h4>
+<div class="paragraph">
+<p>Git Submodules brukes for prosjektarbeid der en ønsker å tildele skriverettigheter til  prosjektmedlemmene, noe som ikke uten videre er tilrådelig for hele arkitekturbiblioteket.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_annet"><a class="anchor" href="#_annet"></a><a class="link" href="#_annet">2.8.2. Annet</a></h4>
+<div class="paragraph">
+<p><span class="image"><img src="./na__felles//images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>I arbeid</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-01-30 19:12:21 Vest-Europa (normaltid)
+Siste oppdatert 2019-01-29 19:26:03 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

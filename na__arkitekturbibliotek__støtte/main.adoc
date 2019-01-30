@@ -1,0 +1,28 @@
+:lang: no
+:doctitle: Støtte (referansebibliotek)
+:keywords: Referansebibliotek
+
+
+include::../na__felles/includes/commonincludes.adoc[]
+
+. link:../Begreper
+. link:../Informasjonsmodeller
+. link:../na__arkitekturbibliotek__støtte__referansearkitekturer[Nasjonale referansearkitekturer]
+. link:../na__arkitekturbibliotek__støtte__taksonomier[Taksonomier]
+
+. link:..Maler
+
+
+////
+leveloffset!:
+== Informasjonsmodeller
+:leveloffset: +1
+include::./informasjonsmodeller/main.adoc[]
+leveloffset!:
+:leveloffset: +1
+include::./metodikk/main.adoc[]
+leveloffset!:
+:leveloffset: +1
+include::./maler/main.adoc[]
+////
+

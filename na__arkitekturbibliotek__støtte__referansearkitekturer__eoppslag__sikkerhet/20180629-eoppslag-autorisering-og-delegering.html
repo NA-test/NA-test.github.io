@@ -5,8 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="nasjonal arkitektur, virksomhetsarkitektur">
-<title>Nasjonal arkitekturplattform</title>
+<meta name="keywords" content="eOppslag sikkerhet autentisering">
+<meta name="author" content="Rolf Rander Næss">
+<title>e-oppslag, modell for autorisering og delegering</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -430,71 +431,396 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>Nasjonal arkitekturplattform</h1>
+<h1>e-oppslag, modell for autorisering og delegering</h1>
+<div class="details">
+<span id="author" class="author">Rolf Rander Næss</span><br>
+<span id="email" class="email"><a href="mailto:rolf.rander.ness@acando.no">rolf.rander.ness@acando.no</a></span><br>
+</div>
 </div>
 <div id="content">
+<div class="sect1">
+<h2 id="_innledning"><a class="anchor" href="#_innledning"></a><a class="link" href="#_innledning">1. Innledning</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_om_dette_dokumentet"><a class="anchor" href="#_om_dette_dokumentet"></a><a class="link" href="#_om_dette_dokumentet">1.1. Om dette dokumentet</a></h3>
 <div class="paragraph">
-<p>Unresolved directive in main.adoc - include::./felles/includes/commonincludes.adoc[]</p>
+<p>Dette dokumentet er et saksfremlegg til arbeidet med referansearkitektur for «e-oppslag», tatt frem av en arbeidsgruppe bestående av:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Jørgen Binningsbø, Difi</p>
+</li>
+<li>
+<p>Rolf Rander Næss, Acando AS, for BRREG</p>
+</li>
+<li>
+<p>Øyvind Syrstad, Systek AS, for Skattedirektoratet</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mål_og_rammer"><a class="anchor" href="#_mål_og_rammer"></a><a class="link" href="#_mål_og_rammer">1.2. Mål og rammer</a></h3>
+<div class="paragraph">
+<p>Dette dokumentet definerer en modell for å diskutere autentisering og autorisasjon i forbindelse med synkrone tjenestekall som implementerer system-til-system-kommunikasjon. Videre foreslås en rekke modeller for å implementere dette i en token-basert tjeneste som er tenkt å være felles på tvers av offentlig sektor. Det er antatt at dette vil implementeres som en utvidelse av dagens «maskin-porten» som tilbys av Difi, men modellen forutsetter ikke dette.
+Modellen som diskuteres i dette dokumentet er ment å løse et felles behov hos offentlige virksomheter som skal utveksle informasjon med offentlige og private virksomheter gjennom tekniske grensesnitt, det er antatt at minst en av aktørene er en offentlig virksomhet.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generell_modell_for_tilgangsstyring"><a class="anchor" href="#_generell_modell_for_tilgangsstyring"></a><a class="link" href="#_generell_modell_for_tilgangsstyring">2. Generell modell for tilgangsstyring</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_overordnet_modell"><a class="anchor" href="#_overordnet_modell"></a><a class="link" href="#_overordnet_modell">2.1. Overordnet modell</a></h3>
+<div class="paragraph">
+<p>Figuren under er i «archimate»-notasjon og oppsummerer de aktører og komponenter som er relevante i diskusjonen av tilgangsstyring.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/norsk-flagg.png" alt="norsk flagg" width="60" height="60"></span> <span class="image"><img src="./images/uttar-pradesh-vidhaan-sabha.png" alt="uttar pradesh vidhaan sabha" width="150" height="150"></span></p>
+<p><span class="image"><img src="./images/:20180629_eoppslag_autorisering_og_delegering-585a5.png" alt=""></span></p>
 </div>
-<div class="paragraph lead">
-<p>Plattform for samproduksjon og deling av arkitekturdokumentasjon på tvers av sektorer og virksomheter i Norge.</p>
 </div>
-<div class="admonitionblock note">
-<table>
+<div class="sect2">
+<h3 id="_aktører"><a class="anchor" href="#_aktører"></a><a class="link" href="#_aktører">2.2. Aktører</a></h3>
+<div class="paragraph">
+<p>En aktør er notert i archimate som en gul boks med en strekfigur. Vi diskuterte 4 ulike typer aktører, bokstavene i parentes er de vi brukte i figurene på tavla:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>API-tilbyder (A): den part som tilbyr en tjeneste gjennom et API</p>
+</li>
+<li>
+<p>Konsument &#169;: den part som skal bruke tjenesten og juridisk sett er mottaker</p>
+</li>
+<li>
+<p>Konsumentens driftsleverandør (L): en separat organisasjon som konsumenten bruker til å forvalte deler av eller hele sin tekniske infrastruktur, samt som i større eller mindre grad er integrert i konsumentens forretningsprosesser.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Modellen sier ikke direkte noe om databehandler eller behandlingsansvarlig, men typisk vil konsument &#169; være behandlingsansvarlig for data den henter gjennom API-et. Dersom konsumenten bruker en driftsleverandør (L) vil denne være databehandler. API-tilbyder vil være en databehandler, og kan også være behandlingsansvarlig.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_avtaler"><a class="anchor" href="#_avtaler"></a><a class="link" href="#_avtaler">2.3. Avtaler</a></h3>
+<div class="paragraph">
+<p>En avtale i archimate-notasjon er en gul boks med to vannrette striper. Det er to avtaler involvert som er relevant:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Driftsavtale: Avtale mellom konsument &#169; og driftsleverandør (L). Dersom L skal opptre på vegne av C (scenario 3 over) er det denne avtalen som delegerer myndighet fra C til L.</p>
+</li>
+<li>
+<p>API-avtale: Avtale mellom tjenesteeier (A) og konsument &#169;. Dette er den avtalen som regulerer C sin tilgang på opplysninger/tjenester fra A. I vår sammenheng hvor C og/eller A er offentlige virksomheter vil denne avtalen typisk være strengt regulert i lov og forskrift.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_applikasjonstjenester_og_komponenter"><a class="anchor" href="#_applikasjonstjenester_og_komponenter"></a><a class="link" href="#_applikasjonstjenester_og_komponenter">2.4. Applikasjonstjenester og -komponenter</a></h3>
+<div class="paragraph">
+<p>Alle begrep på applikasjonslaget er turkis i archimate-notasjonen. Bokser med runde hjørner er tjenester/API, bokser med to «kontakter» til venstre er komponenter.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Klient: dette er omtrent det samme som «client» i OAuth, altså den komponenten som ønsker tilgang til en ressurs</p>
+</li>
+<li>
+<p>Ressursserver: Applikasjon som implementerer tjeneste, det samme som «resource server» i OAuth.</p>
+</li>
+<li>
+<p>Tjeneste/API: grensesnittet som realiseres av «resource server» og som brukes/konsummeres av «client»</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Pilene betyr:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Åpen pil: «brukes av»</p>
+</li>
+<li>
+<p>Trekant med stiplet linje: «realiserer»</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_definisjoner_og_føringer_for_tilgangsstyringsmodellen"><a class="anchor" href="#_definisjoner_og_føringer_for_tilgangsstyringsmodellen"></a><a class="link" href="#_definisjoner_og_føringer_for_tilgangsstyringsmodellen">2.5. Definisjoner og føringer for tilgangsstyringsmodellen</a></h3>
+<div class="paragraph">
+<p>Noen generelle føringer og antagelser som ligger til grunn:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Ressursserver trenger vite hvem konsumenten &#169; er</p>
+</li>
+<li>
+<p>Konsument &#169; kan velge å delegere myndighet til å kalle en eller flere spesifikke tjenester til driftsleverandør (L). Klienten vil autentiseres som enten C eller L. Kapittel 4.1 har konkrete eksempler på når klienten typisk vil velge det ene eller det andre.</p>
+</li>
+<li>
+<p>Enten klienten autentiserer seg som konsument &#169; eller driftsleverandør (L) er det C som er ansvarlig for bruken av tjenesten</p>
+</li>
+<li>
+<p>Det er API-tilbyder (A) som bestemmer hvilke konsumenter &#169; som får kalle tjenesten. Den juridiske delen av dette er avtalen mellom A og C, men den tekniske er en tilgangspolicy som sjekker at klienten opptrer som C.</p>
+</li>
+<li>
+<p>I praksis vil vi ikke styre tilgang til en konkret tjeneste, men til «scope» (S). Hvilke «scope» som er relevante for et gitt API er en egenskap ved dette API-et, og dette er opp til API-tilbyder.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Avgrensninger, hva vi ikke dekker i denne modellen:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Krav til ulike sikkerhetsnivåer på autentiseringen.</p>
+</li>
+<li>
+<p>Involvering av personer, verken system som opptrer på vegne av en person, eller en tjeneste som trenger et samtykke fra en person.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_modell"><a class="anchor" href="#_modell"></a><a class="link" href="#_modell">2.6. Modell</a></h3>
+<div class="sect3">
+<h4 id="_tilgangsstyring"><a class="anchor" href="#_tilgangsstyring"></a><a class="link" href="#_tilgangsstyring">2.6.1. tilgangsstyring:</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>en API-tilbyder (A) gir en klient &#169; rett til å kalle tjenester med et gitt scope (S)</p>
+</li>
+<li>
+<p>tilgangsregelen er tupelet : (C, A, S)</p>
+</li>
+<li>
+<p>dette reguleres av API-avtalen</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_delegering"><a class="anchor" href="#_delegering"></a><a class="link" href="#_delegering">2.6.2. delegering</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>en klient &#169; gir en leverandør (L) rett til å kalle tjenester fra en gitt API-tilbyder (A) med et gitt scope (S)</p>
+</li>
+<li>
+<p>delegeringen er tupelet: (C, A, S, L)</p>
+</li>
+<li>
+<p>alternativt kan vi formulere delegering som ((C, A, S)  L), hvor strukturen til venstre for pilen er den som brukes som tilgangsstyring</p>
+</li>
+<li>
+<p>dette reguleres av driftsavtalen</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_implementering"><a class="anchor" href="#_implementering"></a><a class="link" href="#_implementering">3. Implementering</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Tilgangsstyringen (C, A, S) skal styres av A via et API. Merk at A ikke er et orgno, så for at dette skal virke må vi også ha en mapping (orgno, A) som definerer hvilke A et gitt orgno får lov å styre
+Delegeringen (C, A, S, L) skal kunne styres av:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>C, via et GUI (Altinn er eneste realistiske alternativ for et slikt GUI)</p>
+</li>
+<li>
+<p>Alternativt: L, via et API (for enkelte utvalgte L vi stoler på, som Eika, Sparebank1, Evry)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Disse attributtene kodes ned i et jwt-token som dette:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
 <tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-<em>Nasjonal arkitekturplattform</em> er inntil videre et eksperiment, som ledd i Difis arbeid med kommunikasjonsløsninger.
-</td>
+<th class="tableblock halign-left valign-top">JWT-claim</th>
+<th class="tableblock halign-left valign-top">Attributt</th>
 </tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">client_orgno</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(ikke avklart)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scope</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">S (alternativt at scope er “A:S”)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Aud</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A</p></td>
+</tr>
+</tbody>
 </table>
+<div class="paragraph">
+<p>For at dette skal henge sammen kreves også:</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>Kodeverk for A, knyttet sammen med organisasjonsnummer for hvem som får lov å forvalte hvilke A</p>
+</li>
+<li>
+<p>Tilgjengelige S må være en del av den tekniske API-beskrivelsen</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Punkter som ikke er endelig avklart:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>hvordan skal tilgangsstyrings-tuplet og delegerings-tuplet implementeres?
+o	skal delegering referere til tilgangsstyring (altså C, A, S)  L): dette gir en mer normalisert og konsistent modell o	eller skal det være uavhengige tupler (altså (L, C, A, S: dette gir bedre "separation of concerns", mulighet til å sette opp delegering før tilgangsstyring og mulighet til å implementere delegering og tilgangsstyring i forskjellige tjenester. Med denne modellen kan vi også implementere «wildcard-delegering», altså at (C, *, S, L) betyr «L kan kalle dette scope på vegne av C uavhengig av API-leverandør» og (C, A, *, L) betyr «L kan kalle alle scope hos API-leverandør på vegne av C».</p>
+</li>
+<li>
+<p>og gitt at vi setter opp disse to som uavhengige tupler, skal vi:
+o	implementere begge deler i id-porten: dette får oss raskere til MVP, blir kanskje enklere å forvalte og sørger for at id-porten ikke har runtime-avhengigheter til andre komponenter
+o	implementere tilgangsstyringen i id-porten og delegeringen i altinn: dette er en "renere" løsning ved at delegering ligner på funksjonalitet altinn allerede har, GUI for delegering må uansett ligge i altinn og det legger til rette for en fremtidig "token exchange"-modell</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Disse valgene er sannsynligvis ikke vesentlige for API-et som skal tilbys, og det vil være mulig å endre dette senere. Så for en MVP bør vi velge det som er enklest å implementere.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_eksempler_og_scenarier"><a class="anchor" href="#_eksempler_og_scenarier"></a><a class="link" href="#_eksempler_og_scenarier">4. Eksempler og scenarier</a></h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_eksempel_på_forhold_mellom_l_og_c"><a class="anchor" href="#_eksempel_på_forhold_mellom_l_og_c"></a><a class="link" href="#_eksempel_på_forhold_mellom_l_og_c">4.1. Eksempel på forhold mellom «L» og «C»</a></h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="om-plattformen/">Om plattformen</a></p>
-<div class="paragraph">
-<p>Denne plattformen er tilrettelagt av Difi, med utgangspunkt i gratis verktøy og åpen kildekode. Plattformen har funksjonalitet for redigering, lagring og publisering av dokumenter og arkitekturmodeller, i tillegg til diskusjonsgrupper m.m.</p>
-</div>
+<p>Et selskap har kjøpt regnskapssystem av Visma og installerer dette på egen HW. Regnskapssystemet gjør et oppslag i BR på vegne av selskapet. I denne sammenhengen er «selskap=C» og det finnes ingen L. Regnskapssystemet autentiseres som C.</p>
 </li>
 <li>
-<p><a href="praktiske-tips/">Praktiske tips</a></p>
-<div class="paragraph">
-<p>Praktiske tips for å komme i gang og bidra med innhold, forslag og tilbakemeldinger.</p>
-</div>
+<p>Et selskap har kjøpt regnskapssystem av Visma og installerer dette i Azure. Her er «Selskap=C» og «Microsoft=L». Jeg tror dette innebærer at Microsoft er databehandler og må ha en databehandleravtale med Selskap. Men regnskapssystemet autentiseres fortsatt som C.</p>
 </li>
 <li>
-<p><a href="arkitekturbibliotek/">Nasjonalt arkitekturbibliotek</a></p>
-<div class="paragraph">
-<p>Rammeverk, standarder, veiledere, føringer, felles behov, felles løsninger, felles arkitekturer, styringsinformasjon og annet av interesse på tvers av sektorer og virksomheter.</p>
-</div>
+<p>Selskapet har ikke kjøpt en egen lisens på Visma, men kjører «visma-as-a-service», altså at regnskapssystemet er installert på Visma sin hardware i en delt løsning (samme installasjon betjener mange andre visma-kunder), men selskapet fører regnskapet sitt selv, Visma leverer bare software (as-a-service). Her er «selskap=C» og «visma=L». I denne sammenhengen er det et valg om regnskapssystemet autentiseres som Visma (L), eller om det har egne nøkler/sertifikat for hvert selskap og autentiserer som C, men jeg mener det riktige her er at regnskapssystemet autentiserer som Visma (L)</p>
 </li>
 <li>
-<p><a href="kunnskapsbibliotek/">Kunnskapsbibliotek</a></p>
-<div class="paragraph">
-<p>Samling av interessant og relevant informasjon fra eksterne kilder, som redskap for felles forståelse og kunnskapsbygging på tvers. Dette kan være lenker og omtale av internasjonale standarder, utvalgte bøker, verktøy, arkitekturrammeverk fra andre land, med videre. Alle oppfordres til å bidra med innhold eller forslag til innhold.</p>
-</div>
-</li>
-<li>
-<p><a href="blogg/">Blogger og meningsinnlegg</a></p>
-<div class="paragraph">
-<p>Personlige innlegg - blogger og meningsinnlegg - for å informere eller påvirke  utviklingen av nasjonal arkitektur og nasjonalt arkitekturbibliotek. Alle oppfordres til å bidra med sine personlige meninger.</p>
-</div>
+<p>Selskapet har ikke kjøpt programvare i det hele tatt, men leier Visma til å føre regnskapet for seg. Her er fortsatt «selskap=C» og «visma=L» men jeg mener det er helt åpenbart at her må regnskapssystemet autentiseres som Visma (L). Selskapet &#169; har ingen befatning med programvaren.</p>
 </li>
 </ol>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_eksempel_på_tilgangsmatrise"><a class="anchor" href="#_eksempel_på_tilgangsmatrise"></a><a class="link" href="#_eksempel_på_tilgangsmatrise">4.2. Eksempel på tilgangsmatrise</a></h3>
+<div class="paragraph">
+<p>Tilgangsmatrisen ser slik ut (med et par eksempler fylt ut):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Konsument C</th>
+<th class="tableblock halign-left valign-top">Driftsleverandør L</th>
+<th class="tableblock halign-left valign-top">Tjeneste</th>
+<th class="tableblock halign-left valign-top">API	API-tilbyder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Valle sparebank</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Eikagruppen</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hente ligningsopplysninger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skattedirektoratet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DNB</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hente ligningsopplysninger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skattedirektoratet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bisnode</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Løsøreregisteret</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Brreg</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skattedirektoratet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontoopplysninger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BITS (for lille leikanger sparebank)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Skattedirektoratet</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kontoopplysninger</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storbanken AS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Leikanger kommune</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Visma Flyt barnehagesystem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ledige barnehageplasser</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Private barnehagers landsforbund (for Hermansverk barnehage AS)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>I eksempelet er det formelt sett slik at:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Det er skattedirektoratet som kan bestemme at systemer hos hhv «valle sparebank» og «dnb» kan kalle «hente ligningsopplysninger»</p>
+</li>
+<li>
+<p>Det er valle sparebank som kan bestemme at eikagruppen skal kunne kalle tjeneste-X på vegne av valle sparebank, men når eika sitt system autentiserer seg mot difi-maskinporten, blir systemet autentisert som «eikagruppen» (ikke «valle sparebank»)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Merk at dette gjelder bare hvem som har myndighet til å ta hvilke beslutninger, ikke hvor dette lagres, vedlikeholdes eller håndheves. Merk også at det kan være mer finkornede regler for tilgangsstyring internt i serveren enn hva som fremkommer i tabellen</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-01-30 19:12:21 Vest-Europa (normaltid)
+Siste oppdatert 2019-01-29 19:26:02 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

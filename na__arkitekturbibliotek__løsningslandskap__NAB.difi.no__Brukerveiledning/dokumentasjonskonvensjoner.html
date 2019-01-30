@@ -5,8 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="nasjonal arkitektur, virksomhetsarkitektur">
-<title>Nasjonal arkitekturplattform</title>
+<meta name="keywords" content="dokumentasjon, konvensjoner, retningslinjer">
+<meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
+<title>Introduksjon til dokumentasjonskonvensjoner</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -430,71 +431,150 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>Nasjonal arkitekturplattform</h1>
+<h1>Introduksjon til dokumentasjonskonvensjoner</h1>
+<div class="details">
+<span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
+<span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
+<span id="revdate">2018-08-06</span>
+</div>
 </div>
 <div id="content">
+<div class="sect1">
+<h2 id="_generelt_om_dokumentasjonsformater_lagringsmedia_og_verktøy"><a class="anchor" href="#_generelt_om_dokumentasjonsformater_lagringsmedia_og_verktøy"></a><a class="link" href="#_generelt_om_dokumentasjonsformater_lagringsmedia_og_verktøy">1. Generelt om dokumentasjonsformater, lagringsmedia og verktøy</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved directive in main.adoc - include::./felles/includes/commonincludes.adoc[]</p>
+<p>Eksisterende innhold i diverse formater og verktøy for tekst og multimedia bør kunne lenkes til fra innhold og oversikter i det GitHub-baserte arkitekturbiblioteket, uten at filene flyttes tli GitHub eller konverteres til nye formater. Se <mark>TBD</mark> for mer om dette.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/norsk-flagg.png" alt="norsk flagg" width="60" height="60"></span> <span class="image"><img src="./images/uttar-pradesh-vidhaan-sabha.png" alt="uttar pradesh vidhaan sabha" width="150" height="150"></span></p>
+<p>Alt nytt innhold skal lagres på gjeldende standard innholdsformater, som er:</p>
 </div>
-<div class="paragraph lead">
-<p>Plattform for samproduksjon og deling av arkitekturdokumentasjon på tvers av sektorer og virksomheter i Norge.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Tekst og multimedia: Både Markdown og Asciidoc kan benyttes, men Asciidoc anbefales. Begge disse formatene støttes på GitHub, dvs. at kildefilene kan vises direkte med en layout som er nær opp til det en vil få ved generering av resultatfiler i html. Markdown er per 2018 mest utbredt blant utviklere, men har visse begrensinger. Asciidoc gir større muligheter samtidig som det er (nesten) like lett å komme igang med som Markdown for enkle formål.</p>
+<div class="paragraph">
+<p>Som format for bildefiler anbefales svg.</p>
+</div>
+<div class="paragraph">
+<p>Video: <mark>TBD</mark></p>
+</div>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<em>Nasjonal arkitekturplattform</em> er inntil videre et eksperiment, som ledd i Difis arbeid med kommunikasjonsløsninger.
+Mange  har sterke synspunkter om hva som burde være "vår" standard - Markdown eller Asciidoc. Dette er bakgrunnen for at det i det minste inntil videre åpnes for begge deler, selv om det gir risiko for ekstrajobb med opprydding i neste omgang. Det viktigste er uansett at "alle" som vil dokumentere, får det gjort.
 </td>
 </tr>
 </table>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
+<div class="ulist">
+<ul>
 <li>
-<p><a href="om-plattformen/">Om plattformen</a></p>
-<div class="paragraph">
-<p>Denne plattformen er tilrettelagt av Difi, med utgangspunkt i gratis verktøy og åpen kildekode. Plattformen har funksjonalitet for redigering, lagring og publisering av dokumenter og arkitekturmodeller, i tillegg til diskusjonsgrupper m.m.</p>
-</div>
+<p>Arkitekturmodellering: Arcimate-standarden benyttes som notasjon. Modellene skal tilgjengeliggjøres i html-format, i tillegg til lagring på  standard Archimate utvekslingsformat. Dessuten skal modellene lagres på det originale formatet de ble produsert i. Det er også ønskelig at det gjøres konvertering til formater som kan åpnes direkte i de de mest utbredte verktøyene (per 2018 Archi og eventuelt Spacrx Enterprise Architect).</p>
 </li>
 <li>
-<p><a href="praktiske-tips/">Praktiske tips</a></p>
-<div class="paragraph">
-<p>Praktiske tips for å komme i gang og bidra med innhold, forslag og tilbakemeldinger.</p>
-</div>
+<p>Prosessmodeller: BPMN&#8230;&#8203;</p>
 </li>
 <li>
-<p><a href="arkitekturbibliotek/">Nasjonalt arkitekturbibliotek</a></p>
-<div class="paragraph">
-<p>Rammeverk, standarder, veiledere, føringer, felles behov, felles løsninger, felles arkitekturer, styringsinformasjon og annet av interesse på tvers av sektorer og virksomheter.</p>
-</div>
+<p>Datamodeller: UML Class Diagrams&#8230;&#8203;</p>
 </li>
 <li>
-<p><a href="kunnskapsbibliotek/">Kunnskapsbibliotek</a></p>
-<div class="paragraph">
-<p>Samling av interessant og relevant informasjon fra eksterne kilder, som redskap for felles forståelse og kunnskapsbygging på tvers. Dette kan være lenker og omtale av internasjonale standarder, utvalgte bøker, verktøy, arkitekturrammeverk fra andre land, med videre. Alle oppfordres til å bidra med innhold eller forslag til innhold.</p>
+<p>Regelmodellering: DMN&#8230;&#8203;</p>
+</li>
+</ul>
 </div>
+<div class="paragraph">
+<p>Ut fra standardformatene i biblioteket kan det enkelt konverteres til andre formater for publisering eller videre arbeid. For publisering benyttes i utgangspunktet primært html5.</p>
+</div>
+<div class="paragraph">
+<p>Tidligere dokumentasjon i andre formater konvereres til gjeldende standarder ut fra kost-nytte-vurderinger. Det finnes f.eks. verktøy for konverting av Word-dokumenter til asciidoc, men noe manuelt arbeid må en uansett regne med.</p>
+</div>
+<div class="paragraph">
+<p>Dokumentasjon i andre formater enn standard Asciidoc (eller Markdown) som inngår som en integret del av det nasjonale arkitekturbiblioteket, slik som f.eks. Word eller pdf, lagres i Onedrive i tilsvarende mappestruktur som i GitHub og kan lenkes til som ønsket.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Det er mulig å lagre tradisjonelle dokumenter på github, slik som f.eks Word eller pdf, men dette gjøres i minst mulig grad. Andre teknologier er bedre egnet enn GitHub for lagring og søk i dokumenter. Total størrelse på Github-biblioteket bør dessuten begrenses, slik at det lar seg klone til den enkeltes lokale filområde (det er slik en jobber med innhold i github).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_innholdsproduksjon_i_markdown_format"><a class="anchor" href="#_innholdsproduksjon_i_markdown_format"></a><a class="link" href="#_innholdsproduksjon_i_markdown_format">2. Innholdsproduksjon i Markdown format</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Marddown kan brukes</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_innholdsproduksjon_i_asciidoc_format"><a class="anchor" href="#_innholdsproduksjon_i_asciidoc_format"></a><a class="link" href="#_innholdsproduksjon_i_asciidoc_format">3. Innholdsproduksjon i Asciidoc format</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><mark>TBD</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_archimate_modellering"><a class="anchor" href="#_archimate_modellering"></a><a class="link" href="#_archimate_modellering">4. Archimate-modellering</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><mark>TBD</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bpmn_modellering"><a class="anchor" href="#_bpmn_modellering"></a><a class="link" href="#_bpmn_modellering">5. BPMN-modellering</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><mark>TBD</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_uml_modellering"><a class="anchor" href="#_uml_modellering"></a><a class="link" href="#_uml_modellering">6. UML-modellering</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><mark>TBD</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_annet"><a class="anchor" href="#_annet"></a><a class="link" href="#_annet">7. Annet</a></h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Risikomodellering: <mark>TBD</mark></p>
 </li>
 <li>
-<p><a href="blogg/">Blogger og meningsinnlegg</a></p>
-<div class="paragraph">
-<p>Personlige innlegg - blogger og meningsinnlegg - for å informere eller påvirke  utviklingen av nasjonal arkitektur og nasjonalt arkitekturbibliotek. Alle oppfordres til å bidra med sine personlige meninger.</p>
-</div>
+<p>&#8230;&#8203;</p>
 </li>
-</ol>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-01-30 19:12:21 Vest-Europa (normaltid)
+Siste oppdatert 2019-01-29 19:26:02 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

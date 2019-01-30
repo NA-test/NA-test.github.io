@@ -5,8 +5,9 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="nasjonal arkitektur, virksomhetsarkitektur">
-<title>Nasjonal arkitekturplattform</title>
+<meta name="keywords" content="dokumentasjon, GitHub, innholdsproduksjon">
+<meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
+<title>Praktiske tips for å komme igang med GitHub og innholdsproduksjon</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -430,71 +431,137 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 #footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article">
 <div id="header">
-<h1>Nasjonal arkitekturplattform</h1>
+<h1>Praktiske tips for å komme igang med GitHub og innholdsproduksjon</h1>
+<div class="details">
+<span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
+<span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
+<span id="revdate">2018-08-06</span>
+</div>
 </div>
 <div id="content">
+<div class="sect1">
+<h2 id="_etabler_lokal_filmappe_for_kloning_av_github_filer"><a class="anchor" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer"></a><a class="link" href="#_etabler_lokal_filmappe_for_kloning_av_github_filer">1. Etabler lokal filmappe for kloning av github-filer</a></h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Unresolved directive in main.adoc - include::./felles/includes/commonincludes.adoc[]</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/norsk-flagg.png" alt="norsk flagg" width="60" height="60"></span> <span class="image"><img src="./images/uttar-pradesh-vidhaan-sabha.png" alt="uttar pradesh vidhaan sabha" width="150" height="150"></span></p>
-</div>
-<div class="paragraph lead">
-<p>Plattform for samproduksjon og deling av arkitekturdokumentasjon på tvers av sektorer og virksomheter i Norge.</p>
+<p>Lag en filmappe som hjemmeområde for å arbeide lokalt med github-filer.</p>
 </div>
 <div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<div class="title">Note</div>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<em>Nasjonal arkitekturplattform</em> er inntil videre et eksperiment, som ledd i Difis arbeid med kommunikasjonsløsninger.
+Om du bruker lange navn og dyp mappestruktur i Windows, kan du få problemer med en begrensning på 260
+karakterer i total lengde på filnavn. I og med Windows 10 kan denne begrensningen oppheves. Se f.eks.
+<a href="https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/" class="bare">https://www.howtogeek.com/266621/how-to-make-windows-10-accept-file-paths-over-260-characters/</a> for en oppskrift på
+hvordan dette kan gjøres.<br>
+<br>
+Kort fortalt: På Windows 10 Enterprise kan du kjøre gpedit.msc og endre Aktiver lange Win32 baner under
+Datamaskinkonfigurasjon, Administrative maler, System, Filsystem. Du må restarte eller logge av og på for at endringen skal tre i kraft.<br>
+<br>
+<mark>Overse denne merknaden inntil videre - det er kanskje ikke et problem i praksis. Tips vil flyttes til annet sted&#8230;&#8203;</mark>
 </td>
 </tr>
 </table>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installer_github_desktop"><a class="anchor" href="#_installer_github_desktop"></a><a class="link" href="#_installer_github_desktop">2. Installer GitHub Desktop</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>GitHub Desktop anbefales for å klone og oppdatere GitHub-biblioteker.</p>
+</div>
+<div class="paragraph">
+<p><mark>Tips om nedlasting og bruk kommer her</mark></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+GitHub desktop kan av og til ha problemer med å aksessere .gitconfig-filen. Dette kan trolig fikses ved å opprette en systemvariabel HOME til den mappen du har opprettet som
+hjemmeområde for dine lokale GitHub-filer (bruk Kontrollpanel, System, Avanserte systeminnstillinger, miljøvariabler).<br>
+<br>
+Tips: Det er kanskje en god ide å unngå å bruke nettverks-drive (som noen virksomheter bruker som default for Dokumenter)? Bruk kanskje heller en katalog direkte under ditt brukernavn på C:\Users? Se også  <a href="https://github.com/desktop/desktop/issues/4119" class="bare">https://github.com/desktop/desktop/issues/4119</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_installer_redigeringsverktøy"><a class="anchor" href="#_installer_redigeringsverktøy"></a><a class="link" href="#_installer_redigeringsverktøy">3. Installer redigeringsverktøy</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Flere verktøy for editering av asciidoc finnes. De fleste vil ha nytte av en editor som gir støtte til formatering og viser resultatet direkte (WYSIWIG). Anbefalt her:</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p><a href="om-plattformen/">Om plattformen</a></p>
-<div class="paragraph">
-<p>Denne plattformen er tilrettelagt av Difi, med utgangspunkt i gratis verktøy og åpen kildekode. Plattformen har funksjonalitet for redigering, lagring og publisering av dokumenter og arkitekturmodeller, i tillegg til diskusjonsgrupper m.m.</p>
-</div>
+<p>AsciidocFX. <mark>Mer info kommer.</mark></p>
 </li>
 <li>
-<p><a href="praktiske-tips/">Praktiske tips</a></p>
-<div class="paragraph">
-<p>Praktiske tips for å komme i gang og bidra med innhold, forslag og tilbakemeldinger.</p>
-</div>
+<p>Atom&#8230;&#8203;  <mark>Mer info kommer.</mark></p>
 </li>
 <li>
-<p><a href="arkitekturbibliotek/">Nasjonalt arkitekturbibliotek</a></p>
-<div class="paragraph">
-<p>Rammeverk, standarder, veiledere, føringer, felles behov, felles løsninger, felles arkitekturer, styringsinformasjon og annet av interesse på tvers av sektorer og virksomheter.</p>
-</div>
-</li>
-<li>
-<p><a href="kunnskapsbibliotek/">Kunnskapsbibliotek</a></p>
-<div class="paragraph">
-<p>Samling av interessant og relevant informasjon fra eksterne kilder, som redskap for felles forståelse og kunnskapsbygging på tvers. Dette kan være lenker og omtale av internasjonale standarder, utvalgte bøker, verktøy, arkitekturrammeverk fra andre land, med videre. Alle oppfordres til å bidra med innhold eller forslag til innhold.</p>
-</div>
-</li>
-<li>
-<p><a href="blogg/">Blogger og meningsinnlegg</a></p>
-<div class="paragraph">
-<p>Personlige innlegg - blogger og meningsinnlegg - for å informere eller påvirke  utviklingen av nasjonal arkitektur og nasjonalt arkitekturbibliotek. Alle oppfordres til å bidra med sine personlige meninger.</p>
-</div>
+<p>stackedit.io</p>
 </li>
 </ol>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_klon_github_prosjektet_til_din_maskin"><a class="anchor" href="#_klon_github_prosjektet_til_din_maskin"></a><a class="link" href="#_klon_github_prosjektet_til_din_maskin">4. Klon GitHub-prosjektet til din maskin</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Med Github desktop: File | Clone a repository</p>
+</div>
+<div class="paragraph">
+<p><mark>Mer info kommer.</mark></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_start_å_skrive"><a class="anchor" href="#_start_å_skrive"></a><a class="link" href="#_start_å_skrive">5. Start å skrive</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Du kan gjøre det helt enkelt eller så avansert du måtte ønske, eller noe midt i mellom. Her er noen tips:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="Tips_for_å_skrive_artikler_eller_kapitler.adoc">Tips for å skrive enkle artikler eller kapitler</a></p>
+</li>
+<li>
+<p><a href="Tips_for_å_skrive_dokumenter_eller_bøker.adoc">Tips for å skrive dokumenter eller bøker</a></p>
+</li>
+<li>
+<p>Avanserte tips for innholdsproduksjon (<mark>kommer</mark>)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_andre_tips"><a class="anchor" href="#_andre_tips"></a><a class="link" href="#_andre_tips">6. Andre tips</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><mark>Flere tips kommer her;)</mark></p>
+</div>
+</div>
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2019-01-30 19:12:21 Vest-Europa (normaltid)
+Siste oppdatert 2019-01-29 19:26:02 Vest-Europa (normaltid)
 </div>
 </div>
 </body>
