@@ -10,7 +10,7 @@ image:../na__felles/images/i-arbeid.png[width=75, height=75, alt="Figur mangler:
 
 
 [.lead]
-Her finnes en samling av diverse grunnlagsinformasjon for felles forståelse og kunnskapsbygging på tvers. Dette kan være lenker og omtale av internasjonale standarder, utvalgte bøker, verktøy, arkitekturrammeverk fra andre land, med videre. Alle oppfordres til å bidra med innhold. Se link:..//praktiske-tips[praktiske tips] for å komme i gang.
+Her finnes en samling av diverse grunnlagsinformasjon for felles forståelse og kunnskapsbygging på tvers. Dette kan være lenker og omtale av internasjonale standarder, utvalgte bøker, verktøy, arkitekturrammeverk fra andre land, med videre. Kom gjerne med forslag til innhold. Se link:..//praktiske-tips[praktiske tips] om hvordan.
 
 // NB: Generering av innholdsfortegnelse og lenker må automatiseres
 

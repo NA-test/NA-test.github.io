@@ -10,6 +10,11 @@ ifndef::difi_translation_status[]
 :difi_translation_status: -
 endif::difi_translation_status[]
 
+//NOTE: audience not yet properly implemented
+ifndef::audience[]
+:audience: alle
+endif::audience[]
+
 ifeval::["{lang}" == "no"]
 //************************
 ifdef::doctitle_no[]

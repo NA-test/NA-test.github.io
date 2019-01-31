@@ -6,8 +6,12 @@
 include::../na__felles/includes/commonincludes.adoc[]
 
 
+== Strategiske krav (nasjonalt)
+
+== Segmentkrav (sektorer og domener)
+
 == Kapabilitetskrav
 
-== Segmentkrav
 
-== Strategiske krav
+
+
