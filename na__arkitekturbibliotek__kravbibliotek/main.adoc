@@ -1,16 +1,12 @@
 :lang: no
-:doctitle: Kravbibliotek
+:doctitle: Kravbibliotek - funksjonelle behov
 :keywords: Krav
 
 
 include::../na__felles/includes/commonincludes.adoc[]
 
 
-== Strategiske krav (nasjonalt)
 
-== Segmentkrav (sektorer og domener)
-
-== Kapabilitetskrav
 
 
 
