@@ -1,0 +1,31 @@
+:lang: no
+:doctitle: Praktiske tips for å komme igang 
+:keywords: Github, asciidoc, archi
+
+include::../na_felles/includes/commonincludes.adoc[]
+
+[.lead]
+Plattform for samproduksjon og deling av arkitekturdokumentasjon, etablert av Difi i 2018.
+
+
+////
+////
+
+
+== Praktiske tips for å komme igang med GitHub
+:leveloffset: +1
+include::../na_praktiske-tips_github/main.adoc[]
+
+:leveloffset: -1
+== Asciidoc
+:leveloffset: +1
+include::../na_praktiske-tips_asciidoc/asciidoc-tips.adoc[]
+
+:leveloffset!:
+:leveloffset: +1
+== Praktiske tips om samarbeid med Archi
+:leveloffset: +1
+include::../na_praktiske-tips_archi/main.adoc[]
+
+
+
