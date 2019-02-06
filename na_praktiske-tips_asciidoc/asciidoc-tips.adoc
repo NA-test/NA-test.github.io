@@ -40,7 +40,7 @@ _Merk: Oppstart av AsciidocFX kan ta litt tid, men fungerer ellers meget raskt. 
 
 Se også link:../na_praktiske-tips_asciidoc-fx/main.adoc[mer om AsciidocFX].
 
-NOTE: Du står helt fritt til å bruke andre verktøy om du vil.
+NOTE: Du står helt fritt til å bruke andre verktøy om du vil. 
 
 == Tips om skriving i Asciidoc
 Du kan gjøre det helt enkelt eller mer eller mindre avansert.
