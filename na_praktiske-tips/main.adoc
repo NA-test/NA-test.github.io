@@ -22,7 +22,7 @@ include::../na_praktiske-tips_github/main.adoc[]
 :leveloffset: +1
 include::../na_praktiske-tips_asciidoc/asciidoc-tips.adoc[]
 
-== Praktiske tips om samarbeid med Archi
+== Praktiske tips om samarbeidd med Archi
 :leveloffset!:
 :leveloffset: +1
 include::../na_praktiske-tips_archi/main.adoc[]
