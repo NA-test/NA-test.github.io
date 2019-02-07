@@ -10,6 +10,11 @@ ifndef::difi_translation_status[]
 :difi_translation_status: -
 endif::difi_translation_status[]
 
+//NOTE: audience not yet properly implemented
+ifndef::audience[]
+:audience: alle
+endif::audience[]
+
 ifeval::["{lang}" == "no"]
 //************************
 ifdef::doctitle_no[]
@@ -94,8 +99,9 @@ endif::[]
 :sectanchors:
 :sectnumlevels: 3
 :xrefstyle: short
-//:imagesdir!:
-:imagesdir@: ./images
+
+:imagesdir!:
+//
 ////
 ifdef::attr-root-dir[]
 :imagesdir@: ./common/images
@@ -117,7 +123,7 @@ toc::[]
 endif::[]
 ////
 
-//image:difilogo.svg[image,width=169,height=66]
+//image:./images/difilogo.svg[image,width=169,height=66]
 
 //:difi_include_implementation_notes:
 ifdef::difi_include_implementation_notes[]
