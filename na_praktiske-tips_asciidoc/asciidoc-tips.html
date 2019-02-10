@@ -7,7 +7,7 @@
 <meta name="generator" content="Asciidoctor 1.5.7.1">
 <meta name="keywords" content="Asciidoc">
 <meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Praktiske tips om Asciidoc for å redigere dokumenter</title>
+<title>Praktiske tips om bruk av Asciidoc</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -435,7 +435,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Praktiske tips om Asciidoc for å redigere dokumenter</h1>
+<h1>Praktiske tips om bruk av Asciidoc</h1>
 <div class="details">
 <span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
 <span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
@@ -443,29 +443,29 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Innhold</div>
 <ul class="sectlevel1">
-<li><a href="#_om_asciidoc">1. Om Asciidoc</a>
+<li><a href="#_bakgrunn">1. Bakgrunn</a>
 <ul class="sectlevel2">
-<li><a href="#_mappestrukturog_inkludering_av_innhold_fra_andre_mapper">1.1. Mappestrukturog inkludering av innhold fra andre mapper</a></li>
-<li><a href="#_konvensjon_for_adressering_av_bildefiler">1.2. Konvensjon for adressering av bildefiler</a></li>
-<li><a href="#_felles_mappen">1.3. Felles-mappen</a></li>
-<li><a href="#_standard_header">1.4. Standard-header</a></li>
-<li><a href="#_navnekonvensjoner_for_filnavn">1.5. Navnekonvensjoner for filnavn</a></li>
-<li><a href="#_filetternavn_extensions">1.6. Filetternavn (extensions)</a></li>
+<li><a href="#_om_asciidoc_formatet">1.1. Om Asciidoc-formatet</a></li>
+<li><a href="#_om_felles_mappen">1.2. Om Felles-mappen</a></li>
+<li><a href="#_om_standard_header">1.3. Om standard-header</a></li>
+<li><a href="#_om_bibliotekets_mappe_og_filstruktur">1.4. Om bibliotekets mappe- og filstruktur</a></li>
+<li><a href="#_om_forvaltning_og_kvalitetskontroll">1.5. Om forvaltning og kvalitetskontroll</a></li>
 </ul>
 </li>
-<li><a href="#_mappenavn">2. Mappenavn</a></li>
-<li><a href="#_maler">3. Maler</a></li>
-<li><a href="#_tips_om_redigeringsverktøy_for_asciidoc">4. Tips om redigeringsverktøy for Asciidoc</a></li>
-<li><a href="#_om_teknologier_for_html_publisering">5. Om teknologier for html-publisering</a></li>
-<li><a href="#_konvensjoner_for_bruk_av_asciidoc">6. Konvensjoner for bruk av Asciidoc</a>
+<li><a href="#_tips_om_redigeringsverktøy_for_asciidoc_kom_i_gang">2. Tips om redigeringsverktøy for Asciidoc - kom i gang!</a></li>
+<li><a href="#_konvensjoner_for_bruk_av_asciidoc">3. Konvensjoner for bruk av Asciidoc</a>
 <ul class="sectlevel2">
-<li><a href="#_generelt">6.1. Generelt</a></li>
-<li><a href="#_metadata_og_attributter">6.2. Metadata og attributter</a></li>
-<li><a href="#_språkstøtte">6.3. Språkstøtte</a></li>
-<li><a href="#_tips_om_kommentering">6.4. Tips om kommentering</a></li>
+<li><a href="#_generelt">3.1. Generelt</a></li>
+<li><a href="#_metadata_og_attributter">3.2. Metadata og attributter</a></li>
+<li><a href="#_språkstøtte">3.3. Språkstøtte</a></li>
+<li><a href="#_kommentering">3.4. Kommentering</a></li>
+<li><a href="#_konvensjon_for_adressering_av_bildefiler">3.5. Konvensjon for adressering av bildefiler</a></li>
+<li><a href="#_navnekonvensjoner_for_filnavn">3.6. Navnekonvensjoner for filnavn</a></li>
+<li><a href="#_filetternavn_extensions">3.7. Filetternavn (extensions)</a></li>
+<li><a href="#_mappenavn">3.8. Mappenavn</a></li>
 </ul>
 </li>
-<li><a href="#_automatisert_konsistenssjekking">7. Automatisert konsistenssjekking</a></li>
+<li><a href="#_maler">4. Maler</a></li>
 </ul>
 </div>
 </div>
@@ -481,8 +481,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_om_asciidoc"><a class="anchor" href="#_om_asciidoc"></a><a class="link" href="#_om_asciidoc">1. Om Asciidoc</a></h2>
+<h2 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a><a class="link" href="#_bakgrunn">1. Bakgrunn</a></h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_om_asciidoc_formatet"><a class="anchor" href="#_om_asciidoc_formatet"></a><a class="link" href="#_om_asciidoc_formatet">1.1. Om Asciidoc-formatet</a></h3>
 <div class="paragraph">
 <p>Asciidoc er et mye utbredt format for å skrive artikler og bøker som ren tekst, med enkel "markup" for formatering og metadata som egner seg for prosessering og konvertering til ulike visningsformater, slk som html, pdf osv.</p>
 </div>
@@ -493,7 +495,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Blant altermativer som f.eks. Markdown, er Asciidoc valgt fordi det gir mer avanserte muligheter, samtidig som det er enkelt å komme i gang med.</p>
 </div>
 <div class="paragraph">
-<p>Her er noen kilder til mer generell informasjon om Asciidoc:</p>
+<p>Her er noen kilder til generell informasjon om Asciidoc:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -508,8 +510,39 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </div>
+</div>
 <div class="sect2">
-<h3 id="_mappestrukturog_inkludering_av_innhold_fra_andre_mapper"><a class="anchor" href="#_mappestrukturog_inkludering_av_innhold_fra_andre_mapper"></a><a class="link" href="#_mappestrukturog_inkludering_av_innhold_fra_andre_mapper">1.1. Mappestrukturog inkludering av innhold fra andre mapper</a></h3>
+<h3 id="_om_felles_mappen"><a class="anchor" href="#_om_felles_mappen"></a><a class="link" href="#_om_felles_mappen">1.2. Om Felles-mappen</a></h3>
+<div class="paragraph">
+<p>Alle asciidoc-filer inkluderer maler og annet som ligger i en egen felles-mappe. Her finnes også en mappe med felles bilder og multimediafiler.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_om_standard_header"><a class="anchor" href="#_om_standard_header"></a><a class="link" href="#_om_standard_header">1.3. Om standard-header</a></h3>
+<div class="paragraph">
+<p>Standardmalene inkluderes gjennom følgende include-setning: "include::../na_felles/includes/commonincludes.adoc[]"</p>
+</div>
+<div class="paragraph">
+<p>Her finnes blant annet standardheader.adoc, som tar asciidoc-attrbutter som input og sørger for at det finnes et minimum av metadata, samt at det blir et ensartet utseende av overskrifter, innholdsfortegnelse m.m.
+== Om teknologiene for html-publisering av Asciidoc-dokumenter
+Asciidoctor er det programmet som (per januar 2019) brukes for å generere html5 for publisering av innholdet på nett. Dette inngår i en "verktøykjede" for publisering som plukker opp endrede kildefiler når disse oppdateres i github.</p>
+</div>
+<div class="paragraph">
+<p>Se også</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="../na_kunnskapsbibliotek_verktøy_asciidoctor/main.adoc">Mer om Asciidoctor</a>.</p>
+</li>
+<li>
+<p><a href="../na_praktiske-tips_github/main.adoc">Praktiske tips om bruk av Github</a>.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_om_bibliotekets_mappe_og_filstruktur"><a class="anchor" href="#_om_bibliotekets_mappe_og_filstruktur"></a><a class="link" href="#_om_bibliotekets_mappe_og_filstruktur">1.4. Om bibliotekets mappe- og filstruktur</a></h3>
 <div class="paragraph">
 <p>Arkitekturbiblioteket er bygget opp med en struktur som tilsvarer det som er angitt i <a href="http://pubs.opengroup.org/architecture/togaf9-doc/arch/">TOGAF 9.2</a> og <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/arkitekturrammeverk-samhandling">Norsk arkitekturrammeverk for samhandling</a>:</p>
 </div>
@@ -520,7 +553,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Med unntak av bilder og multimediafiler (og noen fellesfiler), has altså kun ett nivå i mappestrukturen. I tillegg kan det angis metadata (<em>keywords</em>) for å søke etter og gruppere innhold.</p>
 </div>
 <div class="paragraph">
-<p>Dette opplegget er et kompromiss mellom flere hensyn, herunder enkel oversikt og enkle filreferanser.</p>
+<p>Dette opplegget er et kompromiss mellom flere hensyn, herunder enkel oversikt og enkle filreferanser. Se <mark>eget avsnitt</mark> om adressering av bildefiler.</p>
 </div>
 <div class="paragraph">
 <p>Resultatet er at det er enkelt å inkludere og gjenbruke de samme innholdselementene i ulike sammenhenger. En kan bruke asciidoc <em class="blue">include</em> statements og sette sammen "asciidoc-bøker". En kan også lenke relativt til asciidoc-filer uten å kjenne den absolutte url-stien, og en kan kryssreferere til kapitler eller andre tekstblokker på tvers av dokumenter.</p>
@@ -532,19 +565,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <i class="fa icon-warning" title="Advarsel"></i>
 </td>
 <td class="content">
-Når en inkluderer innhold fra andre mapper, er det lett å få problemer med visning av bildefiler. Se eget avsnitt om tips for adressering av bildefiler.
+Når en inkluderer innhold fra andre mapper, er det lett å få problemer med adressering og visning av bildefiler. Se <span class="red">eget avsnitt</span> om tips for adressering av bildefiler.
 </td>
 </tr>
 </table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_konvensjon_for_adressering_av_bildefiler"><a class="anchor" href="#_konvensjon_for_adressering_av_bildefiler"></a><a class="link" href="#_konvensjon_for_adressering_av_bildefiler">1.2. Konvensjon for adressering av bildefiler</a></h3>
+<h3 id="_om_forvaltning_og_kvalitetskontroll"><a class="anchor" href="#_om_forvaltning_og_kvalitetskontroll"></a><a class="link" href="#_om_forvaltning_og_kvalitetskontroll">1.5. Om forvaltning og kvalitetskontroll</a></h3>
 <div class="paragraph">
-<p>Bildefiler inkluderes i asciidoc gjennom et eget <em class="blue">image-direktiv</em> der adresseringen regnes relativt ut fra gjeldende setting av attributten <em class="blue">imagesdir</em>. Om denne attributten ikke er satt, eller eventuelt er resatt gjennom direktivet <em class="blue">:imagesdir!:</em>, tas mappen som den aktuelle asciidoc-filen ligger i son utgangspunkt.</p>
-</div>
-<div class="paragraph">
-<p>Når bildefiler inkluderes indirekte ved at det inkluderes asciidoc-filer som igjen inkluderer images, kan adresseringen lett bli feil. En måte å sikre seg mot slike feil på, er å sørge for at den samme (relative) lenken er gyldig i begge tilfeller. Slik teknologien fungerer per 2018 er det nødvendig å adressere bildefiler relativt til en felles "rotmappe".</p>
+<p>Difi har utviklet løsninger for automatisert konsistenssjekking på tvers av alt innhold i biblioteket, blant annet for å sjekke gyldigheten av at lenker og include-paths.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -553,106 +583,19 @@ Når en inkluderer innhold fra andre mapper, er det lett å få problemer med vi
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Med en "flat" mappestruktur blir relative lenker bestandig de samme (ett hakk opp og ett ned). Dette er en hovedgrunn til valget av flat mappestruktur for Nasjonal arkitekturplattform.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>Gjeldende konvensjon er å bestandig adressere bildefiler relativt til felles "rotmappe" gjennom å gå "ett hakk opp og et ned", f.eks. slik:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>image:../na_om-plattformen/images/asciidoctor-logo.png[width=80, height=80]</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_felles_mappen"><a class="anchor" href="#_felles_mappen"></a><a class="link" href="#_felles_mappen">1.3. Felles-mappen</a></h3>
-<div class="paragraph">
-<p>Konvensjonen er at alle asciidoc-filer inkluderer maler og annet som ligger i en egen felles-mappe. Her finnes også en mappe med felles bilder og multimediafiler.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_standard_header"><a class="anchor" href="#_standard_header"></a><a class="link" href="#_standard_header">1.4. Standard-header</a></h3>
-<div class="paragraph">
-<p>Standardmalene inkluderes gjennom følgende include-setning: "include::../na_felles/includes/commonincludes.adoc[]"</p>
-</div>
-<div class="paragraph">
-<p>Her finnes blant annet standardheader.adoc, som tar asciidoc-attrbutter som input og sørger for at det finnes et minimum av metadata, samt at det blir et ensartet utseende av overskrifter, innholdsfortegnelse m.m.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_navnekonvensjoner_for_filnavn"><a class="anchor" href="#_navnekonvensjoner_for_filnavn"></a><a class="link" href="#_navnekonvensjoner_for_filnavn">1.5. Navnekonvensjoner for filnavn</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Unngå mellomrom.</p>
-</li>
-<li>
-<p>Bruk gjennomgående små bokstaver.</p>
-</li>
-<li>
-<p>Unngå norske karakterer (æøå).</p>
-</li>
-<li>
-<p>Bruk bindestrek (-) for å skille ord i et filnavn eller en "logisk mappe" (se over om mappestruktur).</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_filetternavn_extensions"><a class="anchor" href="#_filetternavn_extensions"></a><a class="link" href="#_filetternavn_extensions">1.6. Filetternavn (extensions)</a></h3>
-<div class="paragraph">
-<p>Bruk *.adoc for asciidoc-filer.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_mappenavn"><a class="anchor" href="#_mappenavn"></a><a class="link" href="#_mappenavn">2. Mappenavn</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>+
-Samme som for filnavn, men dessuten:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Bruk understrek (_) for å skille "logiske mapper" (se over om mappestruktur)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_maler"><a class="anchor" href="#_maler"></a><a class="link" href="#_maler">3. Maler</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><span class="red">Disse malene finnes her: &#8230;&#8203;</span></p>
-</div>
-<div class="paragraph">
-<p>Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.</p>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Advarsel"></i>
-</td>
-<td class="content">
-<mark>TODO: her kommer det mer info&#8230;&#8203;</mark>
+Disse og andre løsninger for operativ forvaltning av bibliotekinnholdet vil være i kontinuerlig utvikling.
 </td>
 </tr>
 </table>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
-<h2 id="_tips_om_redigeringsverktøy_for_asciidoc"><a class="anchor" href="#_tips_om_redigeringsverktøy_for_asciidoc"></a><a class="link" href="#_tips_om_redigeringsverktøy_for_asciidoc">4. Tips om redigeringsverktøy for Asciidoc</a></h2>
+<h2 id="_tips_om_redigeringsverktøy_for_asciidoc_kom_i_gang"><a class="anchor" href="#_tips_om_redigeringsverktøy_for_asciidoc_kom_i_gang"></a><a class="link" href="#_tips_om_redigeringsverktøy_for_asciidoc_kom_i_gang">2. Tips om redigeringsverktøy for Asciidoc - kom i gang!</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Flere verktøy for editering av Asciidoc finnes. De fleste vil ha nytte av en editor som gir støtte til formatering og gir  forhåndsvisnig av resultatet, men det er også mulig å benytte en ordinær teksteditor som f.eks. Notepad++ eller redigere tekst direkte i netleseren på Github.com.</p>
+<p>Det finnes flere brukbare verktøy for editering av Asciidoc. De fleste vil ha nytte av en editor som gir støtte til formatering og gir  forhåndsvisnig av resultatet, men det er også mulig å benytte en ordinær teksteditor som f.eks. Notepad++ eller redigere tekst direkte i netleseren på Github.com.</p>
 </div>
 <div class="paragraph">
 <p>Om du ikke har mulighet til å installere programvare på din maskin og ikke vil vente til du får hjelp av noen med administratorrettigheter, kan du forsøke å arbeide direkte i nettleseren under <a href="https://github.com/difi/nasjonal_arkitektur" class="bare">https://github.com/difi/nasjonal_arkitektur</a> , uten å klone til lokalt filområde. Du kan alternativt bruke asciidoclive; ref. <a href="https://asciidoclive.com/edit/scratch/1" class="bare">https://asciidoclive.com/edit/scratch/1</a></p>
@@ -689,21 +632,10 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 </div>
 </div>
 <div class="sect1">
-<h2 id="_om_teknologier_for_html_publisering"><a class="anchor" href="#_om_teknologier_for_html_publisering"></a><a class="link" href="#_om_teknologier_for_html_publisering">5. Om teknologier for html-publisering</a></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Asciidoctor er det programmet som (per januar 2019) brukes for å generere html5 for publisering av innholdet på nett. Dette inngår i en "verktøykjede" for publisering som plukker opp endrede kildefiler når disse oppdateres i github.</p>
-</div>
-<div class="paragraph">
-<p>Se også <a href="../na_kunnskapsbibliotek_verktøy_asciidoctor/main.adoc">mer om Asciidoctor</a>.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_konvensjoner_for_bruk_av_asciidoc"><a class="anchor" href="#_konvensjoner_for_bruk_av_asciidoc"></a><a class="link" href="#_konvensjoner_for_bruk_av_asciidoc">6. Konvensjoner for bruk av Asciidoc</a></h2>
+<h2 id="_konvensjoner_for_bruk_av_asciidoc"><a class="anchor" href="#_konvensjoner_for_bruk_av_asciidoc"></a><a class="link" href="#_konvensjoner_for_bruk_av_asciidoc">3. Konvensjoner for bruk av Asciidoc</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">6.1. Generelt</a></h3>
+<h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">3.1. Generelt</a></h3>
 <div class="paragraph">
 <p>Difi har etablert noen konvensjoner og maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde metadata, tekster på flere språk, m.m.</p>
 </div>
@@ -712,7 +644,7 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_metadata_og_attributter"><a class="anchor" href="#_metadata_og_attributter"></a><a class="link" href="#_metadata_og_attributter">6.2. Metadata og attributter</a></h3>
+<h3 id="_metadata_og_attributter"><a class="anchor" href="#_metadata_og_attributter"></a><a class="link" href="#_metadata_og_attributter">3.2. Metadata og attributter</a></h3>
 <div class="paragraph">
 <p>Det benyttes</p>
 </div>
@@ -739,7 +671,7 @@ author</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_språkstøtte"><a class="anchor" href="#_språkstøtte"></a><a class="link" href="#_språkstøtte">6.3. Språkstøtte</a></h3>
+<h3 id="_språkstøtte"><a class="anchor" href="#_språkstøtte"></a><a class="link" href="#_språkstøtte">3.3. Språkstøtte</a></h3>
 <div class="paragraph">
 <p>Første linje i asciidoc-filen skal angi default språk. Angi <em>:lang: no</em> for norsk eller <em>:lang: en</em> for engelsk.</p>
 </div>
@@ -782,7 +714,7 @@ endif::[]</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tips_om_kommentering"><a class="anchor" href="#_tips_om_kommentering"></a><a class="link" href="#_tips_om_kommentering">6.4. Tips om kommentering</a></h3>
+<h3 id="_kommentering"><a class="anchor" href="#_kommentering"></a><a class="link" href="#_kommentering">3.4. Kommentering</a></h3>
 <div class="paragraph">
 <p><em class="blue">ifdef-direktivet</em> kan brukes til å inkludere eller eksludere kommentarer fra visningen på en fleksibel måte.</p>
 </div>
@@ -815,20 +747,102 @@ endif::[]</pre>
  <span class="blue">//:Eriks-kommentarer:</span></p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_konvensjon_for_adressering_av_bildefiler"><a class="anchor" href="#_konvensjon_for_adressering_av_bildefiler"></a><a class="link" href="#_konvensjon_for_adressering_av_bildefiler">3.5. Konvensjon for adressering av bildefiler</a></h3>
+<div class="paragraph">
+<p>Bildefiler inkluderes i asciidoc gjennom et eget <em class="blue">image-direktiv</em> der adresseringen regnes relativt ut fra gjeldende setting av attributten <em class="blue">imagesdir</em>. Om denne attributten ikke er satt, eller eventuelt er resatt gjennom direktivet <em class="blue">:imagesdir!:</em>, tas mappen som den aktuelle asciidoc-filen ligger i son utgangspunkt.</p>
+</div>
+<div class="paragraph">
+<p>Når bildefiler inkluderes indirekte ved at det inkluderes asciidoc-filer som igjen inkluderer images, kan adresseringen lett bli feil. En måte å sikre seg mot slike feil på, er å sørge for at den samme (relative) lenken er gyldig i begge tilfeller. Slik teknologien fungerer per 2018 er det nødvendig å adressere bildefiler relativt til en felles "rotmappe".</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Med en "flat" mappestruktur blir relative lenker bestandig de samme (ett hakk opp og ett ned). Dette er en hovedgrunn til valget av flat mappestruktur for Nasjonal arkitekturplattform.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Gjeldende konvensjon er å bestandig adressere bildefiler relativt til felles "rotmappe" gjennom å gå "ett hakk opp og et ned", f.eks. slik:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>image:../na_om-plattformen/images/asciidoctor-logo.png[width=80, height=80]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_navnekonvensjoner_for_filnavn"><a class="anchor" href="#_navnekonvensjoner_for_filnavn"></a><a class="link" href="#_navnekonvensjoner_for_filnavn">3.6. Navnekonvensjoner for filnavn</a></h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Unngå mellomrom.</p>
+</li>
+<li>
+<p>Bruk gjennomgående små bokstaver.</p>
+</li>
+<li>
+<p>Unngå norske karakterer (æøå).</p>
+</li>
+<li>
+<p>Bruk bindestrek (-) for å skille ord i et filnavn eller en "logisk mappe" (se over om mappestruktur).</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_filetternavn_extensions"><a class="anchor" href="#_filetternavn_extensions"></a><a class="link" href="#_filetternavn_extensions">3.7. Filetternavn (extensions)</a></h3>
+<div class="paragraph">
+<p>Bruk *.adoc for asciidoc-filer.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mappenavn"><a class="anchor" href="#_mappenavn"></a><a class="link" href="#_mappenavn">3.8. Mappenavn</a></h3>
+<div class="paragraph">
+<p>Samme som for filnavn, men dessuten:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bruk understrek (_) for å skille "logiske mapper" (se over om mappestruktur)</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_automatisert_konsistenssjekking"><a class="anchor" href="#_automatisert_konsistenssjekking"></a><a class="link" href="#_automatisert_konsistenssjekking">7. Automatisert konsistenssjekking</a></h2>
+<h2 id="_maler"><a class="anchor" href="#_maler"></a><a class="link" href="#_maler">4. Maler</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Difi har utviklet løsninger for konsistenssjekking på tvers av biblioteket, blant annet for å sjekke at lenker og include-paths er korrekte. Disse løsningene vil være i kontinuerlig utvikling.</p>
+<p><span class="red">Disse malene finnes her: &#8230;&#8203;</span></p>
+</div>
+<div class="paragraph">
+<p>Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+<mark>TODO: her kommer det mer info&#8230;&#8203;</mark>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2019-02-10 21:47:27 Vest-Europa (normaltid)
+Siste oppdatert 2019-02-10 22:33:02 Vest-Europa (normaltid)
 </div>
 </div>
 </body>
