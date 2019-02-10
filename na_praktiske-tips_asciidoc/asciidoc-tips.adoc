@@ -5,11 +5,9 @@
 include::../na_felles/includes/commonincludes.adoc[]
 
 [.lead]
-Asciidoc er....
+Asciidoc er et nye utbredt format for å skrive artikler og bøker som ren tekst. Dette formatet gjelder som standard for Nasjonalt arkitekturbibliotek.
 
 image:../na_felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
-
-
 
 
 
@@ -17,13 +15,80 @@ image:../na_felles/images/i-arbeid.png[width=75, height=75] Uferdig innhold
 ////
 
 == Om Asciidoc
-Asciidoc er ...
+Asciidoc er et nye utbredt format for å skrive artikler og bøker som ren tekst, med enkel "markup" for formatering og metadata som egner seg for prosessering og konvertering til ulike visningsformater, slk som html, pdf osv.
 
-Her er noen kilder til informasjon om Asciidoc:
+Et tekstbasert kildeformat som Asciidoc egner seg godt for versjonsstyring i git og gratis løsninger som github. Sammen med gratisverktøy for redigering og publisering, fås en brukbar gratisløsning for Nasjonalt arkitekturbibliotek som alle offentlige virksomheter uten videre kan bidra inn i, med minimal binding til spesifikke leverandører. 
+
+Blant altermativer som f.eks. Markdown, er Asciidoc valgt fordi det gir mer avanserte muligheter, samtidig som det er enkelt å komme i gang med.
+
+
+Her er noen kilder til mer generell informasjon om Asciidoc:
 
 * https://asciidoctor.org/docs/asciidoc-syntax-quick-reference/[Asciidoc syntax quick reference]
 * https://asciidoctor.org/docs/asciidoc-writers-guide/[Asciidoc Writers Guide]
 * https://asciidoctor.org/docs/user-manual/[Asciidoctor User Manual]
+
+=== Mappestruktur og "logiske mapper" i arkitekturbiblioteket
+Arkitekturbiblioteket er bygget opp med en struktur som tilsvarer det som er angitt i link:http://pubs.opengroup.org/architecture/togaf9-doc/arch/[TOGAF 9.2] og link:https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/arkitekturrammeverk-samhandling[Norsk arkitekturrammeverk for samhandling]:
+
+Dette er i utgangspunktet en dyp struktur med flere nivåer. Av praktiske grunner benyttes likevel en flat mappestruktur i filsystemet, typisk med en en mappe per tema eller Asciidoc-bok. Konvensjonen for navning av "logiske mapper" gjør at strukturen uansett framkommer, gitt alfabetisk sortering på mappenavn.
+
+Med unntak av bilder og multimediafiler (og noen fellesfiler), has altså kun ett nivå i mappestrukturen. I tillegg kan det angis metadata (_keywords_) for å søke etter og gruppere innhold.
+
+Dette opplegget gir maksimal fleksibilitet med tanke på å kunne bruke og gjenbruke de samme innholdselementene i ulike sammenhenger. En kan bruke asciidoc [blue]_include_ statements og sette sammen "asciidoc-bøker"  
+
+
+fungerer fint om en har behov for å sette sammen "asciidoc-bøker"ved å inkludere kildefiler fra ulike mapper. 
+
+at  at en  slik at det blir lett å sette sammen  
+
+
+
+
+I hver "logiske mappe" kan en ha en undermappe (filkatalog) for "images" der en samler bilder og multimediainnhold som hører til aktuelt tema eller Asciidoc-bok.
+
+
+
+
+
+Ved å bygge opp biblioteket på denne måten fås båd
+
+=== Felles-mappen
+Konvensjonen er alle asciidoc-filer inkluderer maler og annet som ligger i en egen felles-mappe. Her finnes også en mappe med felles bilder og multimediafiler. 
+
+
+=== Standard-header
+Standardmalene inkluderes gjennom følgende include-setning: "include::../na_felles/includes/commonincludes.adoc[]"
+
+Her finnes blant annet standardheader.adoc, som tar asciidoc-attrbutter som input og sørger for at det finnes et minimum av metadata, samt at det blir et ensartet utseende av overskrifter, innholdsfortegnelse m.m. 
+
+
+=== Navnekonvensjoner for filnavn
+
+* Unngå mellomrom.
+* Bruk gjennomgående små bokstaver.
+* Unngå norske karakterer (æøå).
+* Bruk bindestrek (-) for å skille ord i et filnavn eller en "logisk mappe" (se over om mappestruktur).
+
+=== Filetternavn (extensions)
+Bruk *.adoc for asciidoc-filer.
+
+
+
+== Mappenavn
++
+Samme som for filnavn, men dessuten:
+
+** Bruk understrek (_) for å skille "logiske mapper" (se over om mappestruktur)
+
+
+== Maler
+
+[red]#Disse malene finnes her: ...#
+
+Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.
+
+WARNING: #TODO: her kommer det mer info...#
 
 
 == Tips om redigeringsverktøy for Asciidoc
@@ -38,18 +103,88 @@ https://github.com/asciidocfx/AsciidocFX/releases/[] og arbeid lokalt etter å h
 +
 _Merk: Oppstart av AsciidocFX kan ta litt tid, men fungerer ellers meget raskt. Html forhåndsvisning er umiddelbar og nær opp til det endelige resultatet (som Difi genererer med programmet Asciidoctor). Noen mindre bugs finnes, men programmet er i kontinuerlig utvikling._
 
-Se også link:../na_praktiske-tips_asciidoc-fx/main.adoc[mer om AsciidocFX].
+Se også link:../na_kunnskapsbibliotek_verktøy_asciidoc-fx/main.adoc[mer om AsciidocFX].
+
 
 NOTE: Du står helt fritt til å bruke andre verktøy om du vil. 
 
-== Tips om skriving i Asciidoc
-Du kan gjøre det helt enkelt eller mer eller mindre avansert.
+== Om teknologier for html-publisering
+Asciidoctor er det programmet som (per januar 2019) brukes for å generere html5 for publisering av innholdet på nett. Dette inngår i en "verktøykjede" for publisering som plukker opp endrede kildefiler når disse oppdateres i github.
 
-Difi har etablert noen maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde tekster på flere språk, metadata m.m.
+Se også link:../na_kunnskapsbibliotek_verktøy_asciidoctor/main.adoc[mer om Asciidoctor].
 
-[red]#Disse malene finnes her: ...#
 
-Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.
+== Konvensjoner for bruk av Asciidoc
+=== Generelt
+Difi har etablert noen konvensjoner og maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde metadata, tekster på flere språk, m.m.
 
-WARNING: #TODO: her kommer det mer info...#
+Det er ønskelig at disse konvensjonene følges. Enkeltstående Asciidoc-artikler eller -bøker som ikke følger konvensjonene, kan likevel inkluderes i biblioteket. 
+
+
+=== Metadata og attributter
+Det benyttes 
+
+* doctitle
++
+
+* keywords 
++
+
+* audience
++
+Default: alle
+
+* lang: no
+difi_orig_language
+author
+
+
+
+=== Språkstøtte
+Første linje i asciidoc-filen skal angi default språk. Angi _:lang: no_ for norsk eller _:lang: en_ for engelsk.
+
+WARNING: Om "lang"-attributten ikke angis, antas engelsk. 
+
+Det kan skrives tekstblokker i flere språk (engelsk og norsk) i samme fil. I så fall angis språk slik (eksempel):
+
+ ifeval::["{lang}"=="no"]
+ Blokk med norsk tekst...
+ endif::[]
+ ifeval::["{lang}"=="en"]
+ Block with english text...
+ endif::[]
+
+Her vil uten videre kun ett av språkene vises, dvs. enten "Blokk med norsk tekst..." eller "Block with english text...".
+
+Dette kan overstyres fra kommandolinjen ved generering av html (Asciidoctor attributter), slik at det f.eks. kan genereres en komplett samling av engelske dokumenter.
+
+Ved oversettelse til annet språk, kan det angis hvilket språk det er oversatt fra. En kan da benytte attributten [blue]#_difi_orig_language_#.
+
+Attributten [blue]#_difi_translation_status_# kan benyttes for å angi om oversettelsen er komplett (_complete_), delvis (_incomplete_)  eller foreløpig manglende (_missing_ eller bare _-_). 
+
+
+=== Tips om kommentering
+[blue]_ifdef-direktivet_ kan brukes til å inkludere eller eksludere kommentarer fra visningen på en fleksibel måte. 
+
+[underline]#Eksempel#
+
+Følgende Asciidoc...
+ 
+ :Eriks-kommentarer:
+ ifdef::Eriks-kommentarer[]
+ [red yellow-background]#Erik 2018-08-19: Er denne beskrivelsen god nok?#
+ endif::[] 
+
+
+... vil vise kommentaren slik 
+
+[red yellow-background]#Erik 2018-08-19: Er denne beskrivelsen god nok#
+
+Det eneste som behøvesfor å fjerne alle Eriks kommentarer fra visningen er å kommentere ut definisjonen av atributten, slik: 
+ [blue]#//:Eriks-kommentarer:#
+ 
+
+
+
+
 

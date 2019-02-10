@@ -1,5 +1,9 @@
+ifndef::standardheader_included[]
+
+include::translation.adoc[]
+
 ifndef::difi_orig_language[]
-:difi_orig_language: {lang}
+:difi_orig_language: no
 endif::difi_orig_language[]
 
 ifndef::difi_translation_status[]
@@ -90,8 +94,8 @@ endif::[]
 :sectanchors:
 :sectnumlevels: 3
 :xrefstyle: short
-:imagesdir!:
-//:imagesdir@: ./images
+//:imagesdir!:
+:imagesdir@: ./images
 ////
 ifdef::attr-root-dir[]
 :imagesdir@: ./common/images
@@ -162,3 +166,4 @@ endif::[]
 endif::[]
 
 endif::difi_translation_status[]
+endif::standardheader_included[]

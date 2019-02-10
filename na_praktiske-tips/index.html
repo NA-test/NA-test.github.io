@@ -463,13 +463,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_praktiske_tips_om_redigering_med_asciidoc">2. Praktiske tips om redigering med Asciidoc</a>
 <ul class="sectlevel2">
 <li><a href="#_om_asciidoc">2.1. Om Asciidoc</a></li>
-<li><a href="#_tips_om_redigeringsverktøy_for_asciidoc">2.2. Tips om redigeringsverktøy for Asciidoc</a></li>
-<li><a href="#_tips_om_skriving_i_asciidoc">2.3. Tips om skriving i Asciidoc</a></li>
+<li><a href="#_om_teknologier_for_html_publisering">2.2. Om teknologier for html-publisering</a></li>
+<li><a href="#_tips_om_redigeringsverktøy_for_asciidoc">2.3. Tips om redigeringsverktøy for Asciidoc</a></li>
+<li><a href="#_konvensjoner_for_bruk_av_asciidoc">2.4. Konvensjoner for bruk av Asciidoc</a>
+<ul class="sectlevel3">
+<li><a href="#_generelt_3">2.4.1. Generelt</a></li>
+<li><a href="#_språkstøtte">2.4.2. Språkstøtte</a></li>
+<li><a href="#_tips_om_kommentering">2.4.3. Tips om kommentering</a></li>
+<li><a href="#_filetternavn_extensions">2.4.4. Filetternavn (extensions)</a></li>
+<li><a href="#_metadata">2.4.5. Metadata</a></li>
+<li><a href="#_mappestruktur">2.4.6. Mappestruktur</a></li>
+<li><a href="#_felles_mappen">2.4.7. Felles-mappen</a></li>
+<li><a href="#_standard_header">2.4.8. Standard-header</a></li>
+<li><a href="#_navnekonvensjoner">2.4.9. Navnekonvensjoner</a></li>
+<li><a href="#_maler">2.4.10. Maler</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#_praktiske_tips_om_samarbeid_med_archi">3. Praktiske tips om samarbeid med Archi</a>
 <ul class="sectlevel2">
-<li><a href="#_generelt_3">3.1. Generelt</a></li>
+<li><a href="#_generelt_4">3.1. Generelt</a></li>
 <li><a href="#_installer_archi_og_plugin">3.2. Installer Archi og plugin</a></li>
 <li><a href="#_importer_github_repository">3.3. Importer Github-repository</a></li>
 <li><a href="#_endring_og_synkronisering">3.4. Endring og synkronisering</a></li>
@@ -483,7 +497,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Plattform for samproduksjon og deling av arkitekturdokumentasjon, etablert av Difi i 2018.</p>
+<p>Nasjonalt arkitekturbibliotek er en plattform for samproduksjon og deling av arkitekturdokumentasjon i offentlig sektor, etablert av Difi i 2019.</p>
 </div>
 </div>
 </div>
@@ -494,7 +508,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Her gis praktiske tips om bruk av Github i tilknytning til arbeidet med Nasjonal arkitektur. Det gis tips om spesifikke verktøy, men hver enkelt står fritt til å velge andre alternativer.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>  Omstrukturering og tillegg i arbeid</p>
+<p><span class="image"><img src="../na_felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>  Omstrukturering og tillegg i arbeid</p>
 </div>
 <div class="sect2">
 <h3 id="_generelt"><a class="anchor" href="#_generelt"></a><a class="link" href="#_generelt">1.1. Generelt</a></h3>
@@ -750,7 +764,7 @@ Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrome eller F
 <div class="sect4">
 <h5 id="_annet"><a class="anchor" href="#_annet"></a><a class="link" href="#_annet">Annet</a></h5>
 <div class="paragraph">
-<p><span class="image"><img src="./na_felles//images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>I arbeid</p>
+<p><span class="image"><img src="../na_felles//images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span>I arbeid</p>
 </div>
 </div>
 </div>
@@ -761,18 +775,24 @@ Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrome eller F
 <h2 id="_praktiske_tips_om_redigering_med_asciidoc"><a class="anchor" href="#_praktiske_tips_om_redigering_med_asciidoc"></a><a class="link" href="#_praktiske_tips_om_redigering_med_asciidoc">2. Praktiske tips om redigering med Asciidoc</a></h2>
 <div class="sectionbody">
 <div class="paragraph lead">
-<p>Asciidoc er&#8230;&#8203;.</p>
+<p>Asciidoc er et nye utbredt format for å skrive artikler og bøker som ren tekst. Dette formatet gjelder som standard for Nasjonalt arkitekturbibliotek.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span> Uferdig innhold</p>
+<p><span class="image"><img src="../na_felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span> Uferdig innhold</p>
 </div>
 <div class="sect2">
 <h3 id="_om_asciidoc"><a class="anchor" href="#_om_asciidoc"></a><a class="link" href="#_om_asciidoc">2.1. Om Asciidoc</a></h3>
 <div class="paragraph">
-<p>Asciidoc er &#8230;&#8203;</p>
+<p>Asciidoc er et nye utbredt format for å skrive artikler og bøker som ren tekst, med enkel "markup" for formatering og metadata som egner seg for prosessering og konvertering til ulike visningsformater, slk som html, pdf osv.</p>
 </div>
 <div class="paragraph">
-<p>Her er noen kilder til informasjon om Asciidoc:</p>
+<p>Et tekstbasert kildeformat som Asciidoc egner seg godt for versjonsstyring i git og gratis løsninger som github. Sammen med gratisverktøy for redigering og publisering, fås en brukbar gratisløsning for Nasjonalt arkitekturbibliotek som alle offentlige virksomheter uten videre kan bidra inn i, med minimal binding til spesifikke leverandører.</p>
+</div>
+<div class="paragraph">
+<p>Blant altermativer som f.eks. Markdown, er Asciidoc valgt fordi det gir mer avanserte muligheter, samtidig som det er enkelt å komme i gang med.</p>
+</div>
+<div class="paragraph">
+<p>Her er noen kilder til mer informasjon om Asciidoc:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -789,7 +809,16 @@ Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrome eller F
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tips_om_redigeringsverktøy_for_asciidoc"><a class="anchor" href="#_tips_om_redigeringsverktøy_for_asciidoc"></a><a class="link" href="#_tips_om_redigeringsverktøy_for_asciidoc">2.2. Tips om redigeringsverktøy for Asciidoc</a></h3>
+<h3 id="_om_teknologier_for_html_publisering"><a class="anchor" href="#_om_teknologier_for_html_publisering"></a><a class="link" href="#_om_teknologier_for_html_publisering">2.2. Om teknologier for html-publisering</a></h3>
+<div class="paragraph">
+<p>Asciidoctor er det programmet som (per januar 2019) brukes for å generere html5 for publisering av innholdet på nett. Dette inngår i en "verktøykjede" for publisering som plukker opp endrede kildefiler når disse oppdateres i github.</p>
+</div>
+<div class="paragraph">
+<p>Se også <a href="../na_kunnskapsbibliotek_verktøy_asciidoctor/main.adoc">mer om Asciidoctor</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_tips_om_redigeringsverktøy_for_asciidoc"><a class="anchor" href="#_tips_om_redigeringsverktøy_for_asciidoc"></a><a class="link" href="#_tips_om_redigeringsverktøy_for_asciidoc">2.3. Tips om redigeringsverktøy for Asciidoc</a></h3>
 <div class="paragraph">
 <p>Flere verktøy for editering av Asciidoc finnes. De fleste vil ha nytte av en editor som gir støtte til formatering og gir  forhåndsvisnig av resultatet, men det er også mulig å benytte en ordinær teksteditor som f.eks. Notepad++ eller redigere tekst direkte i netleseren på Github.com.</p>
 </div>
@@ -811,7 +840,7 @@ Bruke MS Internet Explorer eller MS Edge! Preview fungerer ikke i Chrome eller F
 </ul>
 </div>
 <div class="paragraph">
-<p>Se også <a href="../na_praktiske-tips_asciidoc-fx/main.adoc">mer om AsciidocFX</a>.</p>
+<p>Se også <a href="../na_kunnskapsbibliotek_verktøy_asciidoc-fx/main.adoc">mer om AsciidocFX</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -827,13 +856,197 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 </div>
 </div>
 <div class="sect2">
-<h3 id="_tips_om_skriving_i_asciidoc"><a class="anchor" href="#_tips_om_skriving_i_asciidoc"></a><a class="link" href="#_tips_om_skriving_i_asciidoc">2.3. Tips om skriving i Asciidoc</a></h3>
+<h3 id="_konvensjoner_for_bruk_av_asciidoc"><a class="anchor" href="#_konvensjoner_for_bruk_av_asciidoc"></a><a class="link" href="#_konvensjoner_for_bruk_av_asciidoc">2.4. Konvensjoner for bruk av Asciidoc</a></h3>
+<div class="sect3">
+<h4 id="_generelt_3"><a class="anchor" href="#_generelt_3"></a><a class="link" href="#_generelt_3">2.4.1. Generelt</a></h4>
 <div class="paragraph">
-<p>Du kan gjøre det helt enkelt eller mer eller mindre avansert.</p>
+<p>Difi har etablert noen konvensjoner og maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde metadata, tekster på flere språk, m.m.</p>
 </div>
 <div class="paragraph">
-<p>Difi har etablert noen maler i tilknytning til arkitekturbiblioteket som er ment å skulle forenkle arbeidet for hver enkelt, samtidig som en får et ensartet utseende og et opplegg for å vedlikeholde tekster på flere språk, metadata m.m.</p>
+<p>Det er ønskelig at disse konvensjonene følges. Enkeltstående Asciidoc-artikler eller -bøker som ikke følger konvensjonene, kan likevel inkluderes i biblioteket.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_språkstøtte"><a class="anchor" href="#_språkstøtte"></a><a class="link" href="#_språkstøtte">2.4.2. Språkstøtte</a></h4>
+<div class="paragraph">
+<p>Første linje i asciidoc-filen skal angi default språk. Angi <em>:lang: no</em> for norsk eller <em>:lang: en</em> for engelsk.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+Om "lang"-attributten ikke angis, antas engelsk.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Det kan skrives tekstblokker i flere språk (engelsk og norsk) i samme fil. I så fall angis språk slik (eksempel):</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ifeval::["{lang}"=="no"]
+Blokk med norsk tekst...
+endif::[]
+ifeval::["{lang}"=="en"]
+Block with english text...
+endif::[]</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Her vil uten videre kun ett av språkene vises, dvs. enten "Blokk med norsk tekst&#8230;&#8203;" eller "Block with english text&#8230;&#8203;".</p>
+</div>
+<div class="paragraph">
+<p>Dette kan overstyres fra kommandolinjen ved generering av html (Asciidoctor attributter), slik at det f.eks. kan genereres en komplett samling av engelske dokumenter.</p>
+</div>
+<div class="paragraph">
+<p>Ved oversettelse til annet språk, kan det angis hvilket språk det er oversatt fra. En kan da benytte attributten <span class="blue"><em>difi_orig_language</em></span>.</p>
+</div>
+<div class="paragraph">
+<p>Attributten <span class="blue"><em>difi_translation_status</em></span> kan benyttes for å angi om oversettelsen er komplett (<em>complete</em>), delvis (<em>incomplete</em>)  eller foreløpig manglende (<em>missing</em> eller bare <em>-</em>).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_tips_om_kommentering"><a class="anchor" href="#_tips_om_kommentering"></a><a class="link" href="#_tips_om_kommentering">2.4.3. Tips om kommentering</a></h4>
+<div class="paragraph">
+<p><em class="blue">ifdef-direktivet</em> kan brukes til å inkludere eller eksludere kommentarer fra visningen på en fleksibel måte.</p>
+</div>
+<div class="paragraph">
+<p><span class="underline">Eksempel</span></p>
+</div>
+<div class="paragraph">
+<p>Følgende Asciidoc&#8230;&#8203;</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>:Eriks-kommentarer:
+ifdef::Eriks-kommentarer[]
+[red yellow-background]#Erik 2018-08-19: Er denne beskrivelsen god nok?#
+endif::[]</pre>
+</div>
+</div>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>vil vise kommentaren slik</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><span class="red yellow-background">Erik 2018-08-19: Er denne beskrivelsen god nok</span></p>
+</div>
+<div class="paragraph">
+<p>Det eneste som behøvesfor å fjerne alle Eriks kommentarer fra visningen er å kommentere ut definisjonen av atributten, slik:
+ <span class="blue">//:Eriks-kommentarer:</span></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_filetternavn_extensions"><a class="anchor" href="#_filetternavn_extensions"></a><a class="link" href="#_filetternavn_extensions">2.4.4. Filetternavn (extensions)</a></h4>
+<div class="paragraph">
+<p>Bruk *.adoc for asciidoc-filer.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_metadata"><a class="anchor" href="#_metadata"></a><a class="link" href="#_metadata">2.4.5. Metadata</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>doctitle</p>
+</li>
+<li>
+<p>keywords</p>
+</li>
+<li>
+<p>audience</p>
+<div class="paragraph">
+<p>Default: alle</p>
+</div>
+</li>
+<li>
+<p>lang: no
+difi_orig_language
+author</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mappestruktur"><a class="anchor" href="#_mappestruktur"></a><a class="link" href="#_mappestruktur">2.4.6. Mappestruktur</a></h4>
+<div class="paragraph">
+<p>Arkitekturbiblioteket er bygget opp med en struktur som tilsvarer det som er angitt i <a href="http://pubs.opengroup.org/architecture/togaf9-doc/arch/">TOGAF 9.2</a> og <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/arkitekturrammeverk-samhandling">Norsk arkitekturrammeverk for samhandling</a>:</p>
+</div>
+<div class="paragraph">
+<p>Dette er i utgangspunktet en dyp struktur med flere nivåer av undermapper. Av praktiske grunner benyttes i stedet en flat mappestruktur i filsystemet, typisk med en en mappe per "Asciidoc-bok". Konvensjoner for navning av "logiske mapper" gjør at strukturen uansett framkommer, gitt alfabetisk sortering på mappenavn.</p>
+</div>
+<div class="paragraph">
+<p>Konvensjonen sier dessuten at</p>
+</div>
+<div class="paragraph">
+<p>"logisk mappe" har typisk en egen katalog for bilder og multimedia</p>
+</div>
+<div class="paragraph">
+<p>Den eneste underkatalogen i filsystemet som ben</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_felles_mappen"><a class="anchor" href="#_felles_mappen"></a><a class="link" href="#_felles_mappen">2.4.7. Felles-mappen</a></h4>
+<div class="paragraph">
+<p>Konvensjonen er alle asciidoc-filer inkluderer maler og annet som ligger i en egen felles-mappe. Her finnes også en mappe med felles bilder- og multimediafiler.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_standard_header"><a class="anchor" href="#_standard_header"></a><a class="link" href="#_standard_header">2.4.8. Standard-header</a></h4>
+<div class="paragraph">
+<p>Standardmalene inkluderes gjennom følgende include-setning: "include::../na_felles/includes/commonincludes.adoc[]"</p>
+</div>
+<div class="paragraph">
+<p>Her finnes blant annet standardheader.adoc, som tar asciidoc-attrbutter som input og sørger for at det finnes et minimum av metadata, samt at det blir et ensartet utseende av overskrifter, innholdsfortegnelse m.m.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_navnekonvensjoner"><a class="anchor" href="#_navnekonvensjoner"></a><a class="link" href="#_navnekonvensjoner">2.4.9. Navnekonvensjoner</a></h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Filnavn</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Unngå mellomrom.</p>
+</li>
+<li>
+<p>Bruk gjennomgående små bokstaver.</p>
+</li>
+<li>
+<p>Unngå norske karakterer (æøå).</p>
+</li>
+<li>
+<p>Bruk bindestrek (-) for å skille ord i et filnavn eller en "logisk mappe" (se over om mappestruktur).</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Mappenavn</p>
+<div class="paragraph">
+<p>Samme som for filnavn, men dessuten:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Bruk understrek (_) for å skille "logiske mapper" (se over om mappestruktur)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_maler"><a class="anchor" href="#_maler"></a><a class="link" href="#_maler">2.4.10. Maler</a></h4>
 <div class="paragraph">
 <p><span class="red">Disse malene finnes her: &#8230;&#8203;</span></p>
 </div>
@@ -855,6 +1068,7 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_praktiske_tips_om_samarbeid_med_archi"><a class="anchor" href="#_praktiske_tips_om_samarbeid_med_archi"></a><a class="link" href="#_praktiske_tips_om_samarbeid_med_archi">3. Praktiske tips om samarbeid med Archi</a></h2>
 <div class="sectionbody">
@@ -862,13 +1076,13 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 <p>Archi er et gratis og open-source verktøy som støtter Archimate-standarden for arkitekturdokumentasjon, og har tillegg som muliggjør samarbeid rundt felles repository på Github.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_praktiske-tips_archi/images/archi-logo.png" alt="archi logo"></span></p>
+<p>image: ../na_praktiske-tips_archi/images/archi-logo.png[]</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span> Uferdig innhold</p>
+<p><span class="image"><img src="../na_felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span> Uferdig innhold</p>
 </div>
 <div class="sect2">
-<h3 id="_generelt_3"><a class="anchor" href="#_generelt_3"></a><a class="link" href="#_generelt_3">3.1. Generelt</a></h3>
+<h3 id="_generelt_4"><a class="anchor" href="#_generelt_4"></a><a class="link" href="#_generelt_4">3.1. Generelt</a></h3>
 <div class="paragraph">
 <p>Et felles Archi-repository for arbeidet med nasjonal arkitektur finnes på Github, her: <a href="https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur" class="bare">https://github.com/nasjonal-arkitektur/archi-collab-nasjonal-arkitektur</a>.</p>
 </div>
@@ -898,7 +1112,7 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 <p>Last ned og installer Model Repository Collaboration Plugin fra  <a href="https://www.archimatetool.com/plugins/" class="bare">https://www.archimatetool.com/plugins/</a>. Collaboration-menyen skal da komme til syne, slik:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_praktiske-tips_archi/images/collaboration-plugin.png" alt="collaboration plugin" width="450" height="450"></span></p>
+<p><span class="image"><img src="../na_praktiske-tips_archi/images/collaboration-plugin.png" alt="collaboration plugin" width="450" height="450"></span></p>
 </div>
 </li>
 <li>
@@ -907,7 +1121,7 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 <p>Sett inn ditt git brukernavn (Name) og e-post (Email), og mappe-navnet (Local Repository Folder) der du ønsker at Archi skal legge filene når du importerer fra "Github-repoet".</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_praktiske-tips_archi/images/archi-collaboration-preferences.png" alt="archi collaboration preferences" width="600" height="600"></span></p>
+<p><span class="image"><img src="../na_praktiske-tips_archi/images/archi-collaboration-preferences.png" alt="archi collaboration preferences" width="600" height="600"></span></p>
 </div>
 </li>
 <li>
@@ -916,7 +1130,7 @@ Du står helt fritt til å bruke andre verktøy om du vil.
 <p>Du kan konfigurere dine foretrukne standardfigurer under menyen Edit, Preferences, f.eks. slik:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_praktiske-tips_archi/images/preferences-default-figures.png" alt="preferences default figures" width="600" height="600"></span></p>
+<p><span class="image"><img src="../na_praktiske-tips_archi/images/preferences-default-figures.png" alt="preferences default figures" width="600" height="600"></span></p>
 </div>
 </li>
 </ol>
@@ -943,13 +1157,13 @@ Archi har per januar 2019 begrenset funksjonalitet for dette. En har f.eks, ikke
 <p>Når du klikker OK, vil det bli opprettet en mappe ved navn  <em>archi-collab-nasjonal-arkitektur</em> under den mappen du har satt opp under Preferences (se over).</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_praktiske-tips_archi/images/add-remote-model.png" alt="add remote model" width="550" height="550"></span></p>
+<p><span class="image"><img src="../na_praktiske-tips_archi/images/add-remote-model.png" alt="add remote model" width="550" height="550"></span></p>
 </div>
 <div class="paragraph">
 <p>Modell-vinduet i Archi vil vise <mark>difi-nasjonal-arkitektur</mark> som modellnavn:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="./na_praktiske-tips_archi/images/archi-workspace.png" alt="archi workspace" width="220" height="220"></span></p>
+<p><span class="image"><img src="../na_praktiske-tips_archi/images/archi-workspace.png" alt="archi workspace" width="220" height="220"></span></p>
 </div>
 </div>
 <div class="sect2">
@@ -978,7 +1192,7 @@ Archi har per januar 2019 begrenset funksjonalitet for dette. En har f.eks, ikke
 <li>
 <p>Collaboration-plugin oppretter en .git undermappe som ikke uten videre er synlig, der det blant annet ligger en <mark>temp.archimate</mark> fil. Det er denne filen som åpnes i Archi når du har importert biblioteket. Nyttig å vite dersom du f.eks. har kommet til å lukke modellen fra workspace i Archi før du har publisert endringene dine! Det er altså bare å åpne denne filen, så kommer den opp i Archi, helt tilsvarende "normale" Archi-filer.</p>
 <div class="paragraph">
-<p><span class="image"><img src="./na_praktiske-tips_archi/images/hidden-git-files.png" alt="hidden git files" width="300" height="300"></span></p>
+<p><span class="image"><img src="../na_praktiske-tips_archi/images/hidden-git-files.png" alt="hidden git files" width="300" height="300"></span></p>
 </div>
 </li>
 </ul>
@@ -989,7 +1203,7 @@ Archi har per januar 2019 begrenset funksjonalitet for dette. En har f.eks, ikke
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2019-02-07 01:31:03 Vest-Europa (normaltid)
+Siste oppdatert 2019-02-10 13:53:39 Vest-Europa (normaltid)
 </div>
 </div>
 </body>

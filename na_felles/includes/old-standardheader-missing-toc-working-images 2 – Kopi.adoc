@@ -1,10 +1,16 @@
+//ifndef::standardheader_included[]
 ifndef::difi_orig_language[]
-:difi_orig_language: {lang}
+:difi_orig_language: no
 endif::difi_orig_language[]
 
 ifndef::difi_translation_status[]
 :difi_translation_status: -
 endif::difi_translation_status[]
+
+//NOTE: audience not yet properly implemented
+ifndef::audience[]
+:audience: alle
+endif::audience[]
 
 ifeval::["{lang}" == "no"]
 //************************
@@ -90,8 +96,9 @@ endif::[]
 :sectanchors:
 :sectnumlevels: 3
 :xrefstyle: short
+
 :imagesdir!:
-//:imagesdir@: ./images
+//
 ////
 ifdef::attr-root-dir[]
 :imagesdir@: ./common/images
@@ -113,7 +120,7 @@ toc::[]
 endif::[]
 ////
 
-//image:difilogo.svg[image,width=169,height=66]
+//image:./images/difilogo.svg[image,width=169,height=66]
 
 //:difi_include_implementation_notes:
 ifdef::difi_include_implementation_notes[]
@@ -162,3 +169,4 @@ endif::[]
 endif::[]
 
 endif::difi_translation_status[]
+//endif::standardheader_included[]

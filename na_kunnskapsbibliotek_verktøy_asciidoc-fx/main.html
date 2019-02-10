@@ -5,9 +5,8 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.7.1">
-<meta name="keywords" content="eOppslag">
 <meta name="author" content="Direktoratet for forvaltning og ikt (Difi)">
-<title>Referansearkitektur eOppslag</title>
+<title>Asciidoc FX</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -435,7 +434,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-left">
 <div id="header">
-<h1>Referansearkitektur eOppslag</h1>
+<h1>Asciidoc FX</h1>
 <div class="details">
 <span id="author" class="author">Direktoratet for forvaltning og ikt (Difi)</span><br>
 <span id="email" class="email"><a href="mailto:nasjonalarkitektur@difi.no">nasjonalarkitektur@difi.no</a></span><br>
@@ -443,485 +442,61 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Innhold</div>
 <ul class="sectlevel1">
-<li><a href="#_funksjonell_beskrivelse">1. Funksjonell beskrivelse</a>
-<ul class="sectlevel2">
-<li><a href="#_prosessuelle_egenskaper">1.1. Prosessuelle egenskaper</a></li>
-<li><a href="#_kvalitetsegenskaper_ikke_funksjonelle_krav">1.2. Kvalitetsegenskaper (~ikke funksjonelle krav)</a></li>
-</ul>
-</li>
-<li><a href="#_arkitekturbyggeklosser_abbs">2. Arkitekturbyggeklosser (ABBs)</a>
-<ul class="sectlevel2">
-<li><a href="#_abber_for_løs_kobling_portabilitet_og_interoperabilitet">2.1. ABBer for løs-kobling, portabilitet og interoperabilitet</a></li>
-<li><a href="#_abber_for_sikkerhet_og_tillit_trust">2.2. ABBer for Sikkerhet og tillit (trust)</a></li>
-<li><a href="#_abb_for_transport">2.3. ABB for transport</a></li>
-<li><a href="#_abb_kapabilitetsregister">2.4. ABB Kapabilitetsregister</a></li>
-<li><a href="#_abb_adresseringsregister">2.5. ABB Adresseringsregister</a></li>
-<li><a href="#_abb_sertifikatregister">2.6. ABB Sertifikatregister</a></li>
-<li><a href="#_abb_rettighetsregister">2.7. ABB Rettighetsregister</a></li>
-<li><a href="#_abb_sanntidsoppslag_transport_abb_for_eoppslag">2.8. ABB Sanntidsoppslag (transport ABB for eOppslag)</a></li>
-</ul>
-</li>
-<li><a href="#_sikkerhet_eoppslag">3. Sikkerhet, eOppslag</a></li>
+<li><a href="#_introduksjon_til_asciidocfx">1. Introduksjon til AsciidocFX</a></li>
+<li><a href="#_nedlasting_og_installering">2. Nedlasting og installering</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
+<div class="paragraph lead">
+<p>Asciidoc FX is a book / document editor to build PDF, Epub, Mobi and HTML books, documents and slides</p>
+</div>
 <div class="paragraph">
-<p><span class="image"><img src="./images/eOppslagRefArk.png" alt="missing image, eOppslag Referanse arkitektur"></span></p>
+<p><span class="image"><img src="../na_felles/images/i-arbeid.png" alt="i arbeid" width="75" height="75"></span> Uferdig innhold</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_funksjonell_beskrivelse"><a class="anchor" href="#_funksjonell_beskrivelse"></a><a class="link" href="#_funksjonell_beskrivelse">1. Funksjonell beskrivelse</a></h2>
+<h2 id="_introduksjon_til_asciidocfx"><a class="anchor" href="#_introduksjon_til_asciidocfx"></a><a class="link" href="#_introduksjon_til_asciidocfx">1. Introduksjon til AsciidocFX</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Mønsteret dekker oppslag i informasjon ("datadeling"), dvs  forespørsel om informasjon mellom to parter, hvor en prosess hos den ene part typisk er avhengig av informasjon fra den andre for å fortsette.</p>
+<p>AsciidocFX er en skrivebordsapplikasjon og fungerer godt for editering av innhold på AsciiDoc-format. I tillegg  støttes en rekke andre formater, inkl. Markdown.</p>
 </div>
 <div class="paragraph">
-<p>Roller:</p>
+<p><em>Merk: Oppstart av AsciidocFX kan ta litt tid, men fungerer ellers meget raskt. Html forhåndsvisning er umiddelbar og nær opp til det endelige resultatet (som Difi genererer med programmet Asciidoctor). Noen mindre bugs finnes, men programmet er i kontinuerlig utvikling.</em></p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Konsument</strong>: den part som i en egen virksomhetsprosess har behov for informasjon fra en annen part</p>
-</li>
-<li>
-<p><strong>Tilbyder</strong>: den part som besitter informasjon som kan deles</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>Se også <a href="https://asciidocfx.com" class="bare">https://asciidocfx.com</a>.</p>
 </div>
-<div class="sect2">
-<h3 id="_prosessuelle_egenskaper"><a class="anchor" href="#_prosessuelle_egenskaper"></a><a class="link" href="#_prosessuelle_egenskaper">1.1. Prosessuelle egenskaper</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p>ingen sammenheng mellom forretningsprosesser hos de forskjellige partene.</p>
-</li>
-<li>
-<p>Ingen forretningsmessig tilstandsendring hos tilbyder (kun les).</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_kvalitetsegenskaper_ikke_funksjonelle_krav"><a class="anchor" href="#_kvalitetsegenskaper_ikke_funksjonelle_krav"></a><a class="link" href="#_kvalitetsegenskaper_ikke_funksjonelle_krav">1.2. Kvalitetsegenskaper (~ikke funksjonelle krav)</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Tett kobling i tid ift tidspunkt for behandling hos konsument (kallende part)</p>
-</li>
-<li>
-<p>Ingen kobling ift prosesser hos annen part</p>
-</li>
-</ul>
-</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+AsciidocFX is a winner of Duke’s Choice Award 2015.
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_arkitekturbyggeklosser_abbs"><a class="anchor" href="#_arkitekturbyggeklosser_abbs"></a><a class="link" href="#_arkitekturbyggeklosser_abbs">2. Arkitekturbyggeklosser (ABBs)</a></h2>
+<h2 id="_nedlasting_og_installering"><a class="anchor" href="#_nedlasting_og_installering"></a><a class="link" href="#_nedlasting_og_installering">2. Nedlasting og installering</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For å ivareta kvalitetsegenskaper som løs-kobling, interoperabilitet og sikkerhet er ABBene langt på vei er like på tvers av referansearkitekturene. Dette synliggjør viktigheten av at man har felles komponenter på dette området som kan benyttes uavhengig av samhandlingsmønster.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="./images/ABBs.jpg" alt="ABBs"></span></p>
-</div>
-<div class="sect2">
-<h3 id="_abber_for_løs_kobling_portabilitet_og_interoperabilitet"><a class="anchor" href="#_abber_for_løs_kobling_portabilitet_og_interoperabilitet"></a><a class="link" href="#_abber_for_løs_kobling_portabilitet_og_interoperabilitet">2.1. ABBer for løs-kobling, portabilitet og interoperabilitet</a></h3>
-<div class="paragraph">
-<p>Forretningsmessig  prosesstøtte (Koreografi):</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Kapabilitetsregister</strong> (Capability Lookup - SMP)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Svarer på hvilke prosesser/meldingstyper/dokumenttyper (-&#8594; hva er riktig begrep her?) som annen part støtter</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Teknisk:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><strong>Kapabilitetsregister</strong> (Capability Lookup - SMP)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Svarer på hvilke meldingsprotokoller og datasett/meldingstyper (-&#8594;hvilket begrep skal vi benytte?) som annen part støtter</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>Adresseringstjeneste</strong> (Dynamic Service Location - SMP)</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Svarer på hvilke tekniske adresse/endepunkt man skal benytte mot annen part</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abber_for_sikkerhet_og_tillit_trust"><a class="anchor" href="#_abber_for_sikkerhet_og_tillit_trust"></a><a class="link" href="#_abber_for_sikkerhet_og_tillit_trust">2.2. ABBer for Sikkerhet og tillit (trust)</a></h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Konfidensialitet:
-<strong>Sertifikat-tjeneste</strong> for å kunne kryptere (BCP)</p>
-</li>
-<li>
-<p>Autorisasjon: <strong>Rettighetsregister</strong></p>
-</li>
-<li>
-<p>Autorisasjon på tjenestenivå: Verifisering av signatur (ikke visualisert som egen ABB)</p>
-</li>
-<li>
-<p>Dataintegritet:
-Løses ved å signere melding (ikke visualisert som egen ABB)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abb_for_transport"><a class="anchor" href="#_abb_for_transport"></a><a class="link" href="#_abb_for_transport">2.3. ABB for transport</a></h3>
-<div class="paragraph">
-<p><em>(HTTP og Internett?)</em></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abb_kapabilitetsregister"><a class="anchor" href="#_abb_kapabilitetsregister"></a><a class="link" href="#_abb_kapabilitetsregister">2.4. ABB Kapabilitetsregister</a></h3>
-<div class="paragraph">
-<p><strong>Hensikt og funksjonalitet</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Løs kobling – funksjonelt og teknisk</p>
-</li>
-<li>
-<p>Dynamisk identifisering av meldingstyper/ dokumenttyper og protokoller som annen part støtter i kjøretid – muliggjør digitalisering av prosesser på tvers av virksomheter</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Referanser / standarder</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>OASIS SMP:</p>
-<div class="paragraph">
-<p>“The information about the participants (what messages they can process, the message protocol that they support, …) is easily discoverable and accessible…”</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Eksempler på innhold</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Dokumenttyper (meldinger)</p>
-</li>
-<li>
-<p>Protokoll</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>SBBs</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Elma (PEPPOL)</p>
-</li>
-<li>
-<p>KoFuVi</p>
-</li>
-<li>
-<p>CPP/CPA</p>
-</li>
-<li>
-<p>Integrasjonspunktets «Elma»</p>
-</li>
-<li>
-<p>«Innebygd i AltInn»</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abb_adresseringsregister"><a class="anchor" href="#_abb_adresseringsregister"></a><a class="link" href="#_abb_adresseringsregister">2.5. ABB Adresseringsregister</a></h3>
-<div class="paragraph">
-<p>Synonym: DSL - Dynamic Service Location</p>
-</div>
-<div class="paragraph">
-<p><strong>Hensikt og funksjonalitet</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Løs kobling - teknisk</p>
-</li>
-<li>
-<p>Dynamisk identifisering av endepunkt til annen part i kjøretid</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Referanser / standarder</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>OASIS SMP</p>
-<div class="paragraph">
-<p>“Enables the sender to dynamically discover  the  IP address of the receiver”</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Eksempler på innhold</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>IP address</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Eksempler på SBBs</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Elma (PEPPOL)</p>
-</li>
-<li>
-<p>KoFuVi</p>
-</li>
-<li>
-<p>CPP/CPA</p>
-</li>
-<li>
-<p>Integrasjonspunktets «Elma»</p>
-</li>
-<li>
-<p>«Innebygd i AltInn»</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abb_sertifikatregister"><a class="anchor" href="#_abb_sertifikatregister"></a><a class="link" href="#_abb_sertifikatregister">2.6. ABB Sertifikatregister</a></h3>
-<div class="paragraph">
-<p>Også kjent som: BCP - Business Certificate Provider</p>
-</div>
-<div class="paragraph">
-<p><strong>Hensikt og funksjonalitet</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Løs kobling - konfidensialitet</p>
-</li>
-<li>
-<p>Dynamisk identifisering av public key til annen part for en gitt kontekst i kjøretid</p>
-</li>
-<li>
-<p>Muliggjør kryptering av melding</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Referanser / standarder</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>BCP</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Eksempler</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Public key del av Virksomhetssertifikat for et gitt formål</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>SBBs</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>BCP (Difi)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abb_rettighetsregister"><a class="anchor" href="#_abb_rettighetsregister"></a><a class="link" href="#_abb_rettighetsregister">2.7. ABB Rettighetsregister</a></h3>
-<div class="paragraph">
-<p>Også kjent som Autoriserings- og Autorisasjonstjeneste (tilgangskontroll?)</p>
-</div>
-<div class="paragraph">
-<p><strong>Hensikt og funksjonalitet</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Felles enhetlig autorisering</p>
-</li>
-<li>
-<p>Muliggjør oppslag i rettigheter</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Referanser / standarder</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>XACML (eXtensible Access Control Markup Language) for Tilgangskontroll / policy-language</p>
-<div class="paragraph">
-<p>Brukes for å tilgjengeliggjøre info om autorisasjoner / rettigheter en virksomhet/person (autentisert av kallende part) har knyttet til gitte digitale ressurser.</p>
-</div>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Eksempler på innhold</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Samtykke</p>
-</li>
-<li>
-<p>Hjemmel</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>SBBs</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>AltInn Authorization</p>
-</li>
-<li>
-<p>KoFuVi</p>
-<div class="paragraph">
-<p>Inneholder roller fra master Enhetsregisteret som Altinn Authorization ikke inneholder, samt tilgjengeliggjør autorisasjoner fra Altinn og andre domeneregister for fullmakt/autorisasjon.</p>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abb_sanntidsoppslag_transport_abb_for_eoppslag"><a class="anchor" href="#_abb_sanntidsoppslag_transport_abb_for_eoppslag"></a><a class="link" href="#_abb_sanntidsoppslag_transport_abb_for_eoppslag">2.8. ABB Sanntidsoppslag (transport ABB for eOppslag)</a></h3>
-<div class="paragraph">
-<p>Også kjent som: RPC-stil</p>
-</div>
-<div class="paragraph">
-<p><strong>Hensikt og funksjonalitet</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Sanntidsforespørsel om informasjon fra annen part</p>
-</li>
-<li>
-<p>Ingen forretningsmessig tilstandsendring hos annen part</p>
-</li>
-<li>
-<p>Tilbyder er uavhengig av konsuments prosess</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Referanser / standarder</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>SOAP WS</p>
-</li>
-<li>
-<p>«REST» (HTTP)</p>
-</li>
-<li>
-<p>OASIS Open Data Protocol (OData)</p>
-</li>
-<li>
-<p>AS4</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>SBBs</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>"Rest" over HTTP</p>
-</li>
-<li>
-<p>(evt. WS/SOAP)</p>
-</li>
-<li>
-<p>Hvis mulig som direkte integrajon, ellers ved bruk av en integrasjonsproxy (som f.eks. AltInn Innsynstjeneste/mapper)</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_sikkerhet_eoppslag"><a class="anchor" href="#_sikkerhet_eoppslag"></a><a class="link" href="#_sikkerhet_eoppslag">3. Sikkerhet, eOppslag</a></h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="../na_arkitekturbibliotek_referanse_arkitekturer_eoppslag_sikkerhet/eOppslag_sikkerhetsmodell_overordnet.adoc">Overordnet innføring i sikkerhetsmekanismer for eOppslag</a></p>
-</li>
-<li>
-<p><a href="../na_arkitekturbibliotek_referanse_arkitekturer_eoppslag_sikkerhet/20180629-eoppslag-autorisering-og-delegering.adoc">Modell for autorisering og delegering - eOppslag</a></p>
-</li>
-</ol>
+<p>Last ned AsciidocFX fra
+<a href="https://github.com/asciidocfx/AsciidocFX/releases/" class="bare">https://github.com/asciidocfx/AsciidocFX/releases/</a> og arbeid lokalt etter å ha klonet Github-biblioteket.</p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Siste oppdatert 2019-02-06 12:07:45 Vest-Europa (normaltid)
+Siste oppdatert 2019-02-10 11:59:02 Vest-Europa (normaltid)
 </div>
 </div>
 </body>
