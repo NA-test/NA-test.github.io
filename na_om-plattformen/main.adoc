@@ -19,8 +19,6 @@ image:../na_felles/images/i-arbeid.png[width=75, height=75] I arbeid
 
 Plattformen består av 
 
-
-
 image:../na_om-plattformen/images/github-logo.png[width=100, height=100]
 image:../na_om-plattformen/images/onedrive-logo.png[width=100, height=100]
 image:../na_om-plattformen/images/googledrive-logo.png[width=100, height=100]
@@ -29,8 +27,6 @@ image:../na_om-plattformen/images/slack-logo.png[width=200, height=200]
 image:../na_om-plattformen/images/asciidoctor-logo.png[width=80, height=80]
 
 
-
-== Annen informasjon
 
 ////
 
