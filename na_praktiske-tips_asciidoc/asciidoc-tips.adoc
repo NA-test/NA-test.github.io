@@ -92,6 +92,14 @@ Det er ønskelig at disse konvensjonene følges. Enkeltstående Asciidoc-artikle
 
 
 === Metadata og attributter
+Absolutt minimum metadata for (norske) asciidoc-filer er at det oppgis følgende:
+
+ [underline]lang: Sprok, f.eks. "no" for norsk
+
+
+
+
+Som minimum må de oppgi s
 Det benyttes 
 
 * doctitle
@@ -145,12 +153,12 @@ Følgende Asciidoc...
  [red yellow-background]#Erik 2018-08-19: Er denne beskrivelsen god nok?#
  endif::[] 
 
-
-... vil vise kommentaren slik 
+ vil vise kommentaren slik 
 
 [red yellow-background]#Erik 2018-08-19: Er denne beskrivelsen god nok#
 
-Det eneste som behøvesfor å fjerne alle Eriks kommentarer fra visningen er å kommentere ut definisjonen av atributten, slik: 
+Det eneste som behøvesfor å fjerne alle Eriks kommentarer fra visningen er å kommentere ut definisjonen av atributten, slik:
+
  [blue]#//:Eriks-kommentarer:#
  
 
@@ -184,12 +192,8 @@ Samme som for filnavn, men dessuten:
 
 
 == Maler
+image:../na_felles/images/i-arbeid.png[width=75, height=75] I arbeid
 
-[red]#Disse malene finnes her: ...#
-
-Kopier aktuell mal til aktuelt arbeidsområde og start å skrive.
-
-WARNING: #TODO: her kommer det mer info...#
 
 
 
